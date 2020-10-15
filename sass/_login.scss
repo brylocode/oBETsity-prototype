@@ -1,0 +1,131 @@
+// pomyśleć nad bardzo małymi urządzeniami
+// większy font na desktopie
+// sprawdzić jednostki
+//responsywność
+
+.login {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.login__top {
+    display: flex;
+    flex-direction: column;
+    min-width: 335px;
+}
+
+
+.login__title {
+    font-size: 1.8rem;
+    text-align: center;
+    line-height: 2.2rem;
+    font-weight: 500;
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+}
+
+.login__username,
+.login__password {
+    display: flex;
+    flex-direction: column;
+    max-width: 335px;
+    margin-bottom: 2rem;
+
+    label {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+        margin-bottom: 1rem;
+        cursor: pointer;
+    }
+
+    input {
+        padding: 1.2rem 1.5rem;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.4rem;
+        line-height: 2.5rem;
+        font-family: inherit;
+        display: block;
+        border: 1px solid #aaa;
+        border-radius: 3px;
+
+        &:focus {
+            box-shadow: 19px 13px 28px rgba(30, 26, 80, 0.1);
+            border: 2px solid #328BF3;
+            outline: none;
+        }
+    }
+}
+
+.login__mid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 335px;
+    font-size: 1.2rem;
+    line-height: 15px;
+    font-weight: 500;
+    margin-bottom: 2.5rem;
+    min-width: 300px;
+}
+
+.login__remember {
+    display: flex;
+    align-items: center;
+}
+
+.login__forgot {
+    font-style: italic;
+    color: #328BF3;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.login__bott {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login__sing-in-btn {
+    width: 335px;
+    background-color: #328BF3;
+    color: white;
+    border-radius: 3px;
+    font-weight: 700;
+    font-size: 1.7rem;
+    margin-bottom: 3rem;
+
+    &:hover {
+        background-color: darken($color: #328BF3, $amount: 5);
+    }
+
+    &:focus {
+        outline: 3px darken($color: #328BF3, $amount: 3);
+    }
+
+}
+
+.login__sing-up {
+    font-size: 1.4rem;
+    line-height: 2.5rem;
+    color: #767E96;
+
+    a {
+        color: #328BF3;
+    }
+}

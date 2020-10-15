@@ -4,4 +4,187 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
+
+html {
+  font-size: 66.66%;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1.6rem;
+  border: 1px solid transparent;
+  background: none;
+  font-size: 1.4rem;
+  font-family: inherit;
+  color: #000;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: .2s background-color;
+  transition: .2s background-color;
+}
+
+.login {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.login__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-width: 335px;
+}
+
+.login__title {
+  font-size: 1.8rem;
+  text-align: center;
+  line-height: 2.2rem;
+  font-weight: 500;
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+}
+
+.login__username,
+.login__password {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 335px;
+  margin-bottom: 2rem;
+}
+
+.login__username label,
+.login__password label {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.login__username input,
+.login__password input {
+  padding: 1.2rem 1.5rem;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 2.5rem;
+  font-family: inherit;
+  display: block;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+}
+
+.login__username input:focus,
+.login__password input:focus {
+  -webkit-box-shadow: 19px 13px 28px rgba(30, 26, 80, 0.1);
+          box-shadow: 19px 13px 28px rgba(30, 26, 80, 0.1);
+  border: 2px solid #328BF3;
+  outline: none;
+}
+
+.login__mid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 335px;
+  font-size: 1.2rem;
+  line-height: 15px;
+  font-weight: 500;
+  margin-bottom: 2.5rem;
+  min-width: 300px;
+}
+
+.login__remember {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.login__forgot {
+  font-style: italic;
+  color: #328BF3;
+  text-decoration: none;
+}
+
+.login__forgot:hover {
+  text-decoration: underline;
+}
+
+.login__bott {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.login__sing-in-btn {
+  width: 335px;
+  background-color: #328BF3;
+  color: white;
+  border-radius: 3px;
+  font-weight: 700;
+  font-size: 1.7rem;
+  margin-bottom: 3rem;
+}
+
+.login__sing-in-btn:hover {
+  background-color: #1a7df2;
+}
+
+.login__sing-in-btn:focus {
+  outline: 3px #2483f2;
+}
+
+.login__sing-up {
+  font-size: 1.4rem;
+  line-height: 2.5rem;
+  color: #767E96;
+}
+
+.login__sing-up a {
+  color: #328BF3;
+}
 /*# sourceMappingURL=style.css.map */
