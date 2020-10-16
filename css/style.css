@@ -35,7 +35,7 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 0 2rem;
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -46,6 +46,21 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 1rem;
+}
+
+.login__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem 2rem;
 }
 
 .login__top {
@@ -56,16 +71,23 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  min-width: 335px;
 }
 
 .login__title {
-  font-size: 2.3rem;
-  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 4rem;
+  font-size: 2.1rem;
   line-height: 2.2rem;
   font-weight: 800;
-  margin-top: 4rem;
-  margin-bottom: 4rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .login__title {
+    margin-top: 5rem;
+    margin-bottom: 6rem;
+    font-size: 3.3rem;
+  }
 }
 
 .login__username,
@@ -77,37 +99,59 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  max-width: 335px;
+  width: 100%;
   margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .login__username,
+  .login__password {
+    margin-bottom: 3rem;
+  }
 }
 
 .login__username label,
 .login__password label {
-  font-style: normal;
-  font-weight: bold;
+  margin-bottom: 0.5rem;
   font-size: 1.4rem;
   line-height: 1.5rem;
-  margin-bottom: 0.5rem;
+  font-weight: bold;
+  font-style: normal;
   cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .login__username label,
+  .login__password label {
+    font-size: 1.7rem;
+    line-height: 2rem;
+  }
 }
 
 .login__username input,
 .login__password input {
   padding: 1.2rem 1.5rem;
-  font-style: normal;
-  font-size: 1.4rem;
-  line-height: 2.5rem;
-  font-family: inherit;
-  display: block;
   border: 1px solid #aaa;
   border-radius: 3px;
+  font-size: 1.4rem;
+  line-height: 2.5rem;
+  font-style: normal;
+  font-family: inherit;
+}
+
+@media (min-width: 768px) {
+  .login__username input,
+  .login__password input {
+    font-size: 1.7rem;
+    line-height: 3rem;
+  }
 }
 
 .login__username input:focus,
 .login__password input:focus {
+  border: 2px solid #FFC312;
   -webkit-box-shadow: 19px 13px 28px rgba(30, 26, 80, 0.1);
           box-shadow: 19px 13px 28px rgba(30, 26, 80, 0.1);
-  border: 2px solid #FFC312;
   outline: none;
 }
 
@@ -115,15 +159,22 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   font-size: 1.4rem;
   line-height: 1.5rem;
+  width: 100%;
   margin-bottom: 2.5rem;
-  min-width: 330px;
+}
+
+@media (min-width: 768px) {
+  .login__mid {
+    margin-bottom: 4rem;
+    font-size: 1.6rem;
+  }
 }
 
 .login__remember {
@@ -135,14 +186,18 @@ body {
           align-items: center;
 }
 
-.login__remember input[type="checkbox"] {
+.login__remember input {
   margin-right: 0.5rem;
   cursor: pointer;
 }
 
+.login__remember label {
+  cursor: pointer;
+}
+
 .login__forgot {
-  font-style: italic;
   color: #FFC312;
+  font-style: italic;
   text-decoration: none;
 }
 
@@ -161,16 +216,23 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 100%;
 }
 
 .login__sing-in-btn {
-  width: 335px;
+  width: 100%;
+  margin-bottom: 3rem;
+  border-radius: 3px;
   background-color: #FFC312;
   color: black;
-  border-radius: 3px;
   font-weight: 700;
   font-size: 1.9rem;
-  margin-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+  .login__sing-in-btn {
+    font-size: 2.3rem;
+  }
 }
 
 .login__sing-in-btn:hover {
@@ -184,8 +246,14 @@ body {
 .login__sing-up {
   font-size: 1.5rem;
   line-height: 2.5rem;
-  color: #000;
   font-weight: 200;
+  color: #000;
+}
+
+@media (min-width: 768px) {
+  .login__sing-up {
+    font-size: 1.6rem;
+  }
 }
 
 .login__sing-up a {

@@ -1,8 +1,4 @@
-// pomyśleć nad bardzo małymi urządzeniami
-// większy font na desktopie
 // sprawdzić jednostki
-//responsywność
-//kolejność wartości
 
 .login {
     position: sticky;
@@ -10,59 +6,85 @@
     bottom: 0;
     left: 0;
     right: 0;
-    padding: 0 2rem;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 1rem;
 }
 
+.login__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 2rem;
+}
 
 
 .login__top {
     display: flex;
     flex-direction: column;
-    min-width: 335px;
 }
 
 
 .login__title {
-    font-size: 2.3rem;
-    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+    font-size: 2.1rem;
     line-height: 2.2rem;
     font-weight: 800;
-    margin-top: 4rem;
-    margin-bottom: 4rem;
+    text-align: center;
+
+    @media (min-width: $breakpoint-tablet) {
+        margin-top: 5rem;
+        margin-bottom: 6rem;
+        font-size: 3.3rem;
+    }
 }
 
 .login__username,
 .login__password {
     display: flex;
     flex-direction: column;
-    max-width: 335px;
+    width: 100%;
     margin-bottom: 2rem;
 
+    @media (min-width: $breakpoint-tablet) {
+        margin-bottom: 3rem;
+    }
+
+
     label {
-        font-style: normal;
-        font-weight: bold;
+        margin-bottom: 0.5rem;
         font-size: 1.4rem;
         line-height: 1.5rem;
-        margin-bottom: 0.5rem;
+        font-weight: bold;
+        font-style: normal;
         cursor: pointer;
+
+        @media (min-width: $breakpoint-tablet) {
+            font-size: 1.7rem;
+            line-height: 2rem;
+        }
     }
 
     input {
         padding: 1.2rem 1.5rem;
-        font-style: normal;
-        font-size: 1.4rem;
-        line-height: 2.5rem;
-        font-family: inherit;
-        display: block;
         border: 1px solid #aaa;
         border-radius: 3px;
+        font-size: 1.4rem;
+        line-height: 2.5rem;
+        font-style: normal;
+        font-family: inherit;
+
+        @media (min-width: $breakpoint-tablet) {
+            font-size: 1.7rem;
+            line-height: 3rem;
+        }
 
         &:focus {
-            box-shadow: 19px 13px 28px rgba(30, 26, 80, 0.1);
             border: 2px solid $bg-yellow;
+            box-shadow: 19px 13px 28px rgba(30, 26, 80, 0.1);
             outline: none;
         }
     }
@@ -70,27 +92,36 @@
 
 .login__mid {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
+    flex-wrap: wrap;
     font-size: 1.4rem;
     line-height: 1.5rem;
+    width: 100%;
     margin-bottom: 2.5rem;
-    min-width: 330px;
+
+    @media (min-width: $breakpoint-tablet) {
+        margin-bottom: 4rem;
+        font-size: 1.6rem;
+    }
 }
 
 .login__remember {
     display: flex;
     align-items: center;
 
-    input[type="checkbox"] {
+    input {
         margin-right: 0.5rem;
+        cursor: pointer;
+    }
+
+    label {
         cursor: pointer;
     }
 }
 
 .login__forgot {
-    font-style: italic;
     color: $bg-yellow;
+    font-style: italic;
     text-decoration: none;
 
     &:hover {
@@ -102,16 +133,21 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 
 .login__sing-in-btn {
-    width: 335px;
+    width: 100%;
+    margin-bottom: 3rem;
+    border-radius: 3px;
     background-color: $bg-yellow;
     color: black;
-    border-radius: 3px;
     font-weight: 700;
     font-size: 1.9rem;
-    margin-bottom: 3rem;
+
+    @media (min-width: $breakpoint-tablet) {
+        font-size: 2.3rem;
+    }
 
     &:hover {
         background-color: darken($color: $bg-yellow, $amount: 5);
@@ -126,8 +162,12 @@
 .login__sing-up {
     font-size: 1.5rem;
     line-height: 2.5rem;
-    color: #000;
     font-weight: 200;
+    color: #000;
+
+    @media (min-width: $breakpoint-tablet) {
+        font-size: 1.6rem;
+    }
 
     a {
         font-weight: 300;
