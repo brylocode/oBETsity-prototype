@@ -2,9 +2,10 @@
 // większy font na desktopie
 // sprawdzić jednostki
 //responsywność
+//kolejność wartości
 
 .login {
-    position: fixed;
+    position: sticky;
     top: 0;
     bottom: 0;
     left: 0;
@@ -25,12 +26,12 @@
 
 
 .login__title {
-    font-size: 1.8rem;
+    font-size: 2.3rem;
     text-align: center;
     line-height: 2.2rem;
-    font-weight: 500;
-    margin-top: 6rem;
-    margin-bottom: 6rem;
+    font-weight: 800;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
 }
 
 .login__username,
@@ -43,16 +44,15 @@
     label {
         font-style: normal;
         font-weight: bold;
-        font-size: 1.2rem;
+        font-size: 1.4rem;
         line-height: 1.5rem;
-        margin-bottom: 1rem;
+        margin-bottom: 0.5rem;
         cursor: pointer;
     }
 
     input {
         padding: 1.2rem 1.5rem;
         font-style: normal;
-        font-weight: 500;
         font-size: 1.4rem;
         line-height: 2.5rem;
         font-family: inherit;
@@ -62,7 +62,7 @@
 
         &:focus {
             box-shadow: 19px 13px 28px rgba(30, 26, 80, 0.1);
-            border: 2px solid #328BF3;
+            border: 2px solid $bg-yellow;
             outline: none;
         }
     }
@@ -72,22 +72,25 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    max-width: 335px;
-    font-size: 1.2rem;
-    line-height: 15px;
-    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.5rem;
     margin-bottom: 2.5rem;
-    min-width: 300px;
+    min-width: 330px;
 }
 
 .login__remember {
     display: flex;
     align-items: center;
+
+    input[type="checkbox"] {
+        margin-right: 0.5rem;
+        cursor: pointer;
+    }
 }
 
 .login__forgot {
     font-style: italic;
-    color: #328BF3;
+    color: $bg-yellow;
     text-decoration: none;
 
     &:hover {
@@ -103,29 +106,31 @@
 
 .login__sing-in-btn {
     width: 335px;
-    background-color: #328BF3;
-    color: white;
+    background-color: $bg-yellow;
+    color: black;
     border-radius: 3px;
     font-weight: 700;
-    font-size: 1.7rem;
+    font-size: 1.9rem;
     margin-bottom: 3rem;
 
     &:hover {
-        background-color: darken($color: #328BF3, $amount: 5);
+        background-color: darken($color: $bg-yellow, $amount: 5);
     }
 
     &:focus {
-        outline: 3px darken($color: #328BF3, $amount: 3);
+        outline: 3px darken($color: $bg-yellow, $amount: 3);
     }
 
 }
 
 .login__sing-up {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     line-height: 2.5rem;
-    color: #767E96;
+    color: #000;
+    font-weight: 200;
 
     a {
-        color: #328BF3;
+        font-weight: 300;
+        color: $bg-yellow;
     }
 }

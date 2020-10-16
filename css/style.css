@@ -6,11 +6,11 @@
 }
 
 html {
-  font-size: 66.66%;
+  font-size: 10px;
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Nunito", sans-serif;
 }
 
 .btn {
@@ -29,7 +29,8 @@ body {
 }
 
 .login {
-  position: fixed;
+  position: -webkit-sticky;
+  position: sticky;
   top: 0;
   bottom: 0;
   left: 0;
@@ -59,12 +60,12 @@ body {
 }
 
 .login__title {
-  font-size: 1.8rem;
+  font-size: 2.3rem;
   text-align: center;
   line-height: 2.2rem;
-  font-weight: 500;
-  margin-top: 6rem;
-  margin-bottom: 6rem;
+  font-weight: 800;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
 }
 
 .login__username,
@@ -84,9 +85,9 @@ body {
 .login__password label {
   font-style: normal;
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   line-height: 1.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   cursor: pointer;
 }
 
@@ -94,7 +95,6 @@ body {
 .login__password input {
   padding: 1.2rem 1.5rem;
   font-style: normal;
-  font-weight: 500;
   font-size: 1.4rem;
   line-height: 2.5rem;
   font-family: inherit;
@@ -107,7 +107,7 @@ body {
 .login__password input:focus {
   -webkit-box-shadow: 19px 13px 28px rgba(30, 26, 80, 0.1);
           box-shadow: 19px 13px 28px rgba(30, 26, 80, 0.1);
-  border: 2px solid #328BF3;
+  border: 2px solid #FFC312;
   outline: none;
 }
 
@@ -120,12 +120,10 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  max-width: 335px;
-  font-size: 1.2rem;
-  line-height: 15px;
-  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 1.5rem;
   margin-bottom: 2.5rem;
-  min-width: 300px;
+  min-width: 330px;
 }
 
 .login__remember {
@@ -137,9 +135,14 @@ body {
           align-items: center;
 }
 
+.login__remember input[type="checkbox"] {
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+
 .login__forgot {
   font-style: italic;
-  color: #328BF3;
+  color: #FFC312;
   text-decoration: none;
 }
 
@@ -162,29 +165,31 @@ body {
 
 .login__sing-in-btn {
   width: 335px;
-  background-color: #328BF3;
-  color: white;
+  background-color: #FFC312;
+  color: black;
   border-radius: 3px;
   font-weight: 700;
-  font-size: 1.7rem;
+  font-size: 1.9rem;
   margin-bottom: 3rem;
 }
 
 .login__sing-in-btn:hover {
-  background-color: #1a7df2;
+  background-color: #f8b900;
 }
 
 .login__sing-in-btn:focus {
-  outline: 3px #2483f2;
+  outline: 3px #ffbf03;
 }
 
 .login__sing-up {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   line-height: 2.5rem;
-  color: #767E96;
+  color: #000;
+  font-weight: 200;
 }
 
 .login__sing-up a {
-  color: #328BF3;
+  font-weight: 300;
+  color: #FFC312;
 }
 /*# sourceMappingURL=style.css.map */
