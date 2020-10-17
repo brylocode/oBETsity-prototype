@@ -28,11 +28,11 @@ body {
   transition: .2s background-color;
 }
 
-.sing-out-content {
+.sign-out-content {
   display: block;
 }
 
-.sing-in-content {
+.sign-in-content {
   display: none;
 }
 
