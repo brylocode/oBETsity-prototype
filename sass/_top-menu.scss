@@ -1,0 +1,79 @@
+.top-menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 1.5rem 1rem;
+    font-size: 1.5rem;
+    font-weight: 300;
+    background-color: $bg-yellow;
+    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.25);
+}
+
+.currency,
+.user,
+.notification {
+    display: flex;
+    align-items: center;
+    margin-left: 2rem;
+}
+
+.currency {
+    margin-left: 0;
+}
+
+.currency__icon {
+    height: 2.5rem;
+}
+
+.currency__value {
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.user__avatar {
+    display: block;
+    height: 3rem;
+    margin-right: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.01);
+    border-radius: 50%;
+    background-color: #009432;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+        rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+
+.user__name {
+    border-bottom: 1px solid #000;
+    font-size: 1.7rem;
+    font-weight: 900;
+}
+
+.notification {
+    position: relative;
+    height: 3rem;
+    width: 3rem;
+    background-image: url('/assets/icons/bell.svg');
+    background-size: cover;
+    background-position: center center;
+
+    &::after {
+        content: attr(data-badge);
+        position: absolute;
+        top: -0.75rem;
+        right: -0.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 1.5rem;
+        height: 1.5rem;
+        border-radius: 50%;
+        font-size: .8em;
+        font-weight: 700;
+        color: black;
+        background-color: $bg-red;
+        text-align: center;
+    }
+}
