@@ -1,12 +1,12 @@
 // sprawdzić jednostki
 
 .login {
-    position: sticky;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100vh;
+    // position: sticky;
+    // top: 0;
+    // bottom: 0;
+    // left: 0;
+    // right: 0;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -36,7 +36,7 @@
     font-weight: 800;
     text-align: center;
 
-    @media (min-width: $breakpoint-tablet) {
+    @media (min-width: $breakpoint-sm) {
         margin-top: 5rem;
         margin-bottom: 6rem;
         font-size: 3.3rem;
@@ -50,7 +50,7 @@
     width: 100%;
     margin-bottom: 2rem;
 
-    @media (min-width: $breakpoint-tablet) {
+    @media (min-width: $breakpoint-sm) {
         margin-bottom: 3rem;
     }
 
@@ -63,7 +63,7 @@
         font-style: normal;
         cursor: pointer;
 
-        @media (min-width: $breakpoint-tablet) {
+        @media (min-width: $breakpoint-sm) {
             font-size: 1.7rem;
             line-height: 2rem;
         }
@@ -78,7 +78,7 @@
         font-style: normal;
         font-family: inherit;
 
-        @media (min-width: $breakpoint-tablet) {
+        @media (min-width: $breakpoint-sm) {
             font-size: 1.7rem;
             line-height: 3rem;
         }
@@ -100,7 +100,7 @@
     width: 100%;
     margin-bottom: 2.5rem;
 
-    @media (min-width: $breakpoint-tablet) {
+    @media (min-width: $breakpoint-sm) {
         margin-bottom: 4rem;
         font-size: 1.6rem;
     }
@@ -137,7 +137,7 @@
     width: 100%;
 }
 
-.login__sing-in-btn {
+.login__sign-in-btn {
     width: 100%;
     margin-bottom: 3rem;
     border-radius: 3px;
@@ -146,7 +146,7 @@
     font-weight: 700;
     font-size: 1.9rem;
 
-    @media (min-width: $breakpoint-tablet) {
+    @media (min-width: $breakpoint-sm) {
         font-size: 2.3rem;
     }
 
@@ -160,13 +160,14 @@
 
 }
 
-.login__sing-up {
+
+.login__sign-up {
     font-size: 1.5rem;
     line-height: 2.5rem;
     font-weight: 200;
     color: #000;
 
-    @media (min-width: $breakpoint-tablet) {
+    @media (min-width: $breakpoint-sm) {
         font-size: 1.6rem;
     }
 
