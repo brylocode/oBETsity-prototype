@@ -1,0 +1,62 @@
+.side-menu {
+    transform: translateX(-180px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    min-height: 100vh;
+    width: 25rem;
+    background-color: $bg-yellow;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+        rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    border-right: 1px solid rgba(0, 0, 0, 0.3);
+    transition: .3s transform;
+}
+
+.side-menu--active {
+    transform: translateX(0px);
+}
+
+
+.side-menu__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    padding: .5rem 1rem;
+
+    .app-name {
+        font-size: 3rem;
+        font-weight: 900;
+    }
+
+    .side-menu__toggle-open-icon {
+        padding: 0.5rem;
+        height: 4.5rem;
+        cursor: pointer;
+    }
+
+}
+
+.side-menu__list {
+    padding: 1rem;
+    list-style: none;
+}
+
+.side-menu__link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #000;
+    text-decoration: none;
+    margin: 1rem 0;
+    padding: 0 .5rem;
+    font-size: 2.3rem;
+    font-weight: 200;
+    // border-left: 1px solid #000;
+
+    img {
+        height: 4rem;
+    }
+}

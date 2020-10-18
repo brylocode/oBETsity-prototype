@@ -59,7 +59,7 @@ const handleSignIn = (username) => {
     console.log(`twoi znajomi to: ${loggedUser.friends.map(friend => friend.username.toString())}`);
     console.log(`masz  ${loggedUser.achievements.length} osiągnięć`);
 
-    
+
     showSignedInContent();
 }
 
@@ -84,5 +84,25 @@ const logOut = () => {
 
 signInBtn.addEventListener('click', getUsernameAndPassword);
 signOutBtn.addEventListener('click', logOut);
+
+
+//menu
+
+const menuOpenCloseBtn = document.querySelector('.side-menu__toggle-open-icon-js');
+const sideMenu = document.querySelector('.side-menu-js');
+
+const handleOpenCloseSideMenu = () => {
+    if (!sideMenu.classList.contains('side-menu--active')) {
+        sideMenu.classList.add('side-menu--active');
+        // document.body.style.marginLeft = '180px';
+    } else {
+        sideMenu.classList.remove('side-menu--active');
+        // document.body.style.marginLeft = '0';
+    }
+}
+
+menuOpenCloseBtn.addEventListener('click', handleOpenCloseSideMenu)
+
+
 
 

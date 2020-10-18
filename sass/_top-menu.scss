@@ -3,10 +3,12 @@
     justify-content: flex-end;
     align-items: center;
     position: fixed;
+    z-index: 100;
     top: 0;
     left: 0;
     right: 0;
-    padding: 1.5rem 1rem;
+    padding: 1.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
     font-size: 1.5rem;
     font-weight: 300;
     background-color: $bg-yellow;
@@ -32,6 +34,7 @@
 .currency__value {
     font-size: 2rem;
     font-weight: 800;
+    cursor: pointer;
 }
 
 .user__avatar {
@@ -43,12 +46,14 @@
     background-color: #009432;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
         rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    cursor: pointer;
 }
 
 .user__name {
     border-bottom: 1px solid #000;
     font-size: 1.7rem;
     font-weight: 900;
+    cursor: pointer;
 }
 
 .notification {
@@ -58,6 +63,7 @@
     background-image: url('../assets/icons/bell.svg');
     background-size: cover;
     background-position: center center;
+    cursor: pointer;
 
     &::after {
         content: attr(data-badge);

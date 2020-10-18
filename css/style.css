@@ -30,11 +30,13 @@ body {
 }
 
 .sign-out-content {
-  display: block;
+  display: none;
 }
 
 .sign-in-content {
-  display: none;
+  display: block;
+  padding-top: 6rem;
+  padding-left: 7rem;
 }
 
 .login {
@@ -276,10 +278,12 @@ body {
       -ms-flex-align: center;
           align-items: center;
   position: fixed;
+  z-index: 100;
   top: 0;
   left: 0;
   right: 0;
-  padding: 1.5rem 1rem;
+  padding: 1.5rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
   font-size: 1.5rem;
   font-weight: 300;
   background-color: #FFC312;
@@ -310,6 +314,7 @@ body {
 .currency__value {
   font-size: 2rem;
   font-weight: 800;
+  cursor: pointer;
 }
 
 .user__avatar {
@@ -321,12 +326,14 @@ body {
   background-color: #009432;
   -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
           box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  cursor: pointer;
 }
 
 .user__name {
   border-bottom: 1px solid #000;
   font-size: 1.7rem;
   font-weight: 900;
+  cursor: pointer;
 }
 
 .notification {
@@ -336,6 +343,7 @@ body {
   background-image: url("../assets/icons/bell.svg");
   background-size: cover;
   background-position: center center;
+  cursor: pointer;
 }
 
 .notification::after {
@@ -360,5 +368,87 @@ body {
   color: black;
   background-color: #EA2027;
   text-align: center;
+}
+
+.side-menu {
+  -webkit-transform: translateX(-180px);
+          transform: translateX(-180px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  min-height: 100vh;
+  width: 25rem;
+  background-color: #FFC312;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+          box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  border-right: 1px solid rgba(0, 0, 0, 0.3);
+  -webkit-transition: .3s transform;
+  transition: .3s transform;
+}
+
+.side-menu--active {
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+}
+
+.side-menu__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  line-height: 5rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  padding: .5rem 1rem;
+}
+
+.side-menu__header .app-name {
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+.side-menu__header .side-menu__toggle-open-icon {
+  padding: 0.5rem;
+  height: 4.5rem;
+  cursor: pointer;
+}
+
+.side-menu__list {
+  padding: 1rem;
+  list-style: none;
+}
+
+.side-menu__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #000;
+  text-decoration: none;
+  margin: 1rem 0;
+  padding: 0 .5rem;
+  font-size: 2.3rem;
+  font-weight: 200;
+}
+
+.side-menu__link img {
+  height: 4rem;
+}
+
+main {
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
 }
 /*# sourceMappingURL=style.css.map */
