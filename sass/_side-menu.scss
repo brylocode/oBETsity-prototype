@@ -1,20 +1,28 @@
 .side-menu {
-    transform: translateX(-180px);
     position: fixed;
     top: 0;
     left: 0;
     z-index: 100;
-    min-height: 100vh;
+    display: block;
+    height: 100vh;
     width: 25rem;
     background-color: $bg-yellow;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
         rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
     border-right: 1px solid rgba(0, 0, 0, 0.3);
-    transition: .3s transform;
+    transform: translateX(-180px);
+    transition: .3s transform ease-out;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    @media (min-width: $breakpoint-lg) and (orientation: landscape) {
+        overflow-y: hidden;
+        overflow-x: hidden;
+    }
 }
 
-.side-menu--active {
-    transform: translateX(0px);
+.side-menu--opened {
+    transform: translate(0, 0);
 }
 
 
@@ -35,7 +43,13 @@
         padding: 0.5rem;
         height: 4.5rem;
         cursor: pointer;
+        transition: transform .3s;
     }
+
+    .side-menu__toggle-open-icon--close {
+        transform: rotate(180deg);
+    }
+
 
 }
 

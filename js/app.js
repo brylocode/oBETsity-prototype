@@ -77,6 +77,7 @@ const logOut = () => {
     usernameInput.value = '';
     passwordInput.value = '';
     showSignedOutContent();
+    closeSideMenu();
 }
 
 
@@ -91,13 +92,23 @@ signOutBtn.addEventListener('click', logOut);
 const menuOpenCloseBtn = document.querySelector('.side-menu__toggle-open-icon-js');
 const sideMenu = document.querySelector('.side-menu-js');
 
+const openSideMenu = () => {
+    sideMenu.classList.add('side-menu--opened');
+    menuOpenCloseBtn.style.transform = `rotate(180deg)`;
+    // document.body.style.marginLeft = '180px';
+}
+
+const closeSideMenu = () => {
+    sideMenu.classList.remove('side-menu--opened');
+    menuOpenCloseBtn.style.transform = `rotate(0)`;
+    // document.body.style.marginLeft = '0';
+}
+
 const handleOpenCloseSideMenu = () => {
-    if (!sideMenu.classList.contains('side-menu--active')) {
-        sideMenu.classList.add('side-menu--active');
-        // document.body.style.marginLeft = '180px';
+    if (!sideMenu.classList.contains('side-menu--opened')) {
+        openSideMenu();
     } else {
-        sideMenu.classList.remove('side-menu--active');
-        // document.body.style.marginLeft = '0';
+        closeSideMenu();
     }
 }
 
