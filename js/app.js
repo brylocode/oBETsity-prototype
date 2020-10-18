@@ -11,8 +11,7 @@ let loggedUser = {
     username,
     avatar: '',
     currency: 1000,
-    friends: [
-        {
+    friends: [{
             id: 1,
             username: 'Monika',
             avatar: 'https://randomuser.me/api/portraits/women/33.jpg',
@@ -91,16 +90,23 @@ signOutBtn.addEventListener('click', logOut);
 
 const menuOpenCloseBtn = document.querySelector('.side-menu__toggle-open-icon-js');
 const sideMenu = document.querySelector('.side-menu-js');
+const topMenu = document.querySelector('.top-menu-js');
+const main = document.querySelector('.main-js');
+
 
 const openSideMenu = () => {
     sideMenu.classList.add('side-menu--opened');
-    menuOpenCloseBtn.style.transform = `rotate(180deg)`;
+    menuOpenCloseBtn.classList.add('side-menu__toggle-open-icon--close');
+    main.classList.add('main--sidemenuopened')
+    topMenu.classList.add('top-menu--sidemenuopened')
     // document.body.style.marginLeft = '180px';
 }
 
 const closeSideMenu = () => {
     sideMenu.classList.remove('side-menu--opened');
-    menuOpenCloseBtn.style.transform = `rotate(0)`;
+    menuOpenCloseBtn.classList.remove('side-menu__toggle-open-icon--close');
+    main.classList.remove('main--sidemenuopened')
+    topMenu.classList.remove('top-menu--sidemenuopened')
     // document.body.style.marginLeft = '0';
 }
 
@@ -113,7 +119,4 @@ const handleOpenCloseSideMenu = () => {
 }
 
 menuOpenCloseBtn.addEventListener('click', handleOpenCloseSideMenu)
-
-
-
-
+// sideMenu.addEventListener('click', handleOpenCloseSideMenu)

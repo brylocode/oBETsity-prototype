@@ -1,3 +1,7 @@
-main {
-    transition: transform .3s;
+.main {
+    transition: transform .3s ease-out;
+
+    &--sidemenuopened {
+        transform: translateX(180px);
+    }
 }
