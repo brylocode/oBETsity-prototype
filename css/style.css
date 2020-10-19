@@ -592,6 +592,10 @@ body {
   font-weight: 900;
 }
 
+.dashboard__section-title {
+  font-size: 2.5rem;
+}
+
 .dashboard__stats {
   display: -webkit-box;
   display: -ms-flexbox;
