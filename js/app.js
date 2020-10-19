@@ -6,6 +6,7 @@ const signOutContent = document.querySelector('.sign-out-content-js');
 const signInContent = document.querySelector('.sign-in-content-js');
 const signInBtn = document.querySelector('.login__sign-in-btn-js');
 const signOutBtn = document.querySelector('.sign-out-btn-js');
+const nickName = document.querySelector('.user__name');
 
 let loggedUser = {
     username,
@@ -29,6 +30,7 @@ let loggedUser = {
     ],
     achievements: [],
 };
+
 let userCurrency;
 
 
@@ -51,7 +53,7 @@ const showError = (error) => {
 
 const handleSignIn = (username) => {
     loggedUser.username = username;
-
+    nickName.textContent = `${username}`;
 
     console.log(`witaj ${loggedUser.username}`)
     console.log(`masz ${loggedUser.currency} waluty`)
@@ -75,6 +77,7 @@ const getUsernameAndPassword = () => {
 const logOut = () => {
     usernameInput.value = '';
     passwordInput.value = '';
+    nickName.textContent = ``;
     showSignedOutContent();
     closeSideMenu();
 }
