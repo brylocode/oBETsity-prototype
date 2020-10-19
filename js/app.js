@@ -69,10 +69,13 @@ const getUsernameAndPassword = () => {
     const password = passwordInput.value;
     if (username === '') {
         showError('wpisz nazwę użytkownika...');
+    } else if (username.length >= 10) {
+        showError('nazwa użytkownika nie może być dłuższa niż 10');
     } else {
         handleSignIn(username);
     }
 }
+
 
 const logOut = () => {
     usernameInput.value = '';
@@ -93,6 +96,7 @@ signOutBtn.addEventListener('click', logOut);
 
 const menuOpenCloseBtn = document.querySelector('.side-menu__toggle-open-icon-js');
 const sideMenu = document.querySelector('.side-menu-js');
+let menuLinks = document.querySelectorAll(".side-menu-js a.side-menu__link");
 const topMenu = document.querySelector('.top-menu-js');
 const main = document.querySelector('.main-js');
 
@@ -121,5 +125,24 @@ const handleOpenCloseSideMenu = () => {
     }
 }
 
-menuOpenCloseBtn.addEventListener('click', handleOpenCloseSideMenu)
+menuOpenCloseBtn.addEventListener('click', handleOpenCloseSideMenu);
+menuLinks.forEach(link => link.addEventListener('click', closeSideMenu))
 // sideMenu.addEventListener('click', handleOpenCloseSideMenu)
+
+
+
+
+
+
+for (let link of menuLinks) {
+    link.addEventListener('click', function (e) {
+        let appSections = document.querySelectorAll(".main-js section");
+        for (let section of appSections) {
+            if ("#" + section.id === link.getAttribute("href")) {
+                section.style.display = "block";
+            } else {
+                section.style.display = "none";
+            }
+        }
+    });
+}

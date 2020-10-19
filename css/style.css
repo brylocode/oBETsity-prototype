@@ -34,7 +34,7 @@ body {
 
 .sign-in-content {
   display: block;
-  padding-top: 6rem;
+  padding-top: 7rem;
   padding-left: 7rem;
   overflow-x: hidden;
 }
@@ -282,7 +282,7 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  padding: 1.5rem;
+  padding: 2rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.3);
   font-size: 1.5rem;
   font-weight: 300;
@@ -297,8 +297,8 @@ body {
 
 @media (max-width: 576px) and (orientation: portrait) {
   .top-menu--sidemenuopened {
-    -webkit-transform: translateX(190px);
-            transform: translateX(190px);
+    -webkit-transform: translateX(200px);
+            transform: translateX(200px);
   }
 }
 
@@ -341,9 +341,11 @@ body {
 }
 
 .user__name {
+  min-width: 8.5rem;
   border-bottom: 1px solid #000;
   font-size: 1.7rem;
   font-weight: 900;
+  text-align: center;
   cursor: pointer;
 }
 
@@ -404,6 +406,7 @@ body {
   -webkit-transition: .3s transform ease-out;
   transition: .3s transform ease-out;
   overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 @media (max-width: 813px) and (orientation: landscape) {
@@ -427,7 +430,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  line-height: 5rem;
+  line-height: 6rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.3);
   padding: .5rem 1rem;
 }
@@ -517,6 +520,11 @@ body {
           transform: scale(1.1);
 }
 
+.link--active img {
+  -webkit-transform: scale(2);
+          transform: scale(2);
+}
+
 .side-menu__log-out {
   margin-top: auto;
   padding: 0 1rem;
@@ -550,6 +558,7 @@ body {
 }
 
 .main {
+  width: 100%;
   -webkit-transition: -webkit-transform .3s ease-out;
   transition: -webkit-transform .3s ease-out;
   transition: transform .3s ease-out;
@@ -559,5 +568,14 @@ body {
 .main--sidemenuopened {
   -webkit-transform: translateX(180px);
           transform: translateX(180px);
+}
+
+.main__section {
+  display: none;
+  min-height: calc(100vh - 7rem);
+}
+
+#dashboard {
+  display: block;
 }
 /*# sourceMappingURL=style.css.map */

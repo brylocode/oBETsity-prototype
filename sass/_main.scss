@@ -1,7 +1,17 @@
 .main {
+    width: 100%;
     transition: transform .3s ease-out;
 
     &--sidemenuopened {
         transform: translateX(180px);
     }
+}
+
+.main__section {
+    display: none;
+    min-height: calc(100vh - 7rem);
+}
+
+#dashboard {
+    display: block;
 }
