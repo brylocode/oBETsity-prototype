@@ -31,21 +31,16 @@ let loggedUser = {
     achievements: [],
 };
 
-let userCurrency;
-
-
-
 
 const showSignedInContent = () => {
     signOutContent.style.display = `none`;
     signInContent.style.display = `block`;
 }
+
 const showSignedOutContent = () => {
     signOutContent.style.display = `block`;
     signInContent.style.display = `none`;
 }
-
-
 
 const showError = (error) => {
     alert(error);
@@ -53,14 +48,8 @@ const showError = (error) => {
 
 const handleSignIn = (username) => {
     loggedUser.username = username;
-    nickName.textContent = `${username}`;
-
-    console.log(`witaj ${loggedUser.username}`)
-    console.log(`masz ${loggedUser.currency} waluty`)
-    console.log(`twoi znajomi to: ${loggedUser.friends.map(friend => friend.username.toString())}`);
-    console.log(`masz  ${loggedUser.achievements.length} osiągnięć`);
-
-
+    console.log(loggedUser.username)
+    nickName.textContent = `${loggedUser.username}`;
     showSignedInContent();
 }
 
@@ -146,3 +135,5 @@ for (let link of menuLinks) {
         }
     });
 }
+
+//dashboard
