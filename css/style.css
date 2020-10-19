@@ -683,7 +683,7 @@ body {
   bottom: 0;
   height: 2.5rem;
   width: 2.5rem;
-  background-image: url("/assets/icons/circled-arrow.svg");
+  background-image: url("../assets/icons/circled-arrow.svg");
   background-position: center;
   background-size: cover;
   -webkit-transition: -webkit-transform .3s;
