@@ -128,7 +128,7 @@
     font-weight: 900;
     width: 100%;
     border-radius: 10rem;
-    box-shadow: 0 7px 30px -10px rgb(150, 170, 180);
+    box-shadow: 0 7px 30px -20px rgb(150, 170, 180);
     outline: transparent;
     cursor: pointer;
     transition: filter .2s;
@@ -146,7 +146,7 @@
 
 .chall--win {
 
-    box-shadow: 0 7px 30px -10px $bg-green;
+    box-shadow: 0 7px 30px -20px $bg-green;
 
     .chall__value {
         // color: $bg-green;
@@ -165,7 +165,7 @@
 
 .chall--lose {
 
-    box-shadow: 0 7px 30px -10px $bg-red;
+    box-shadow: 0 7px 30px -20px $bg-red;
 
     .chall__value {
         // color: $bg-red;

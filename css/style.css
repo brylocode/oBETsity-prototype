@@ -29,11 +29,11 @@ body {
 }
 
 .sign-out-content {
-  display: block;
+  display: none;
 }
 
 .sign-in-content {
-  display: none;
+  display: block;
   padding-top: 7rem;
   padding-left: 7rem;
   overflow-x: hidden;
@@ -607,7 +607,7 @@ body {
   font-size: 2.5rem;
 }
 
-#dashboard {
+#challenges {
   display: block;
 }
 
@@ -793,8 +793,8 @@ body {
   font-weight: 900;
   width: 100%;
   border-radius: 10rem;
-  -webkit-box-shadow: 0 7px 30px -10px #96aab4;
-          box-shadow: 0 7px 30px -10px #96aab4;
+  -webkit-box-shadow: 0 7px 30px -20px #96aab4;
+          box-shadow: 0 7px 30px -20px #96aab4;
   outline: transparent;
   cursor: pointer;
   -webkit-transition: -webkit-filter .2s;
@@ -814,8 +814,8 @@ body {
 }
 
 .chall--win {
-  -webkit-box-shadow: 0 7px 30px -10px #009432;
-          box-shadow: 0 7px 30px -10px #009432;
+  -webkit-box-shadow: 0 7px 30px -20px #009432;
+          box-shadow: 0 7px 30px -20px #009432;
 }
 
 .chall--win .chall__bet {
@@ -828,8 +828,8 @@ body {
 }
 
 .chall--lose {
-  -webkit-box-shadow: 0 7px 30px -10px #EA2027;
-          box-shadow: 0 7px 30px -10px #EA2027;
+  -webkit-box-shadow: 0 7px 30px -20px #EA2027;
+          box-shadow: 0 7px 30px -20px #EA2027;
 }
 
 .chall--lose .chall__bet {
@@ -847,8 +847,8 @@ body {
   border-radius: 1rem;
   margin: 1rem;
   background: #FFFFFF;
-  -webkit-box-shadow: 0 7px 30px -10px #96aab4;
-          box-shadow: 0 7px 30px -10px #96aab4;
+  -webkit-box-shadow: 0 7px 30px -20px #96aab4;
+          box-shadow: 0 7px 30px -20px #96aab4;
 }
 
 .stat__header {
