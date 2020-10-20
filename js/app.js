@@ -86,6 +86,7 @@ signOutBtn.addEventListener('click', logOut);
 const menuOpenCloseBtn = document.querySelector('.side-menu__toggle-open-icon-js');
 const sideMenu = document.querySelector('.side-menu-js');
 let menuLinks = document.querySelectorAll(".side-menu-js a.side-menu__link");
+let links = document.querySelectorAll("a");
 const topMenu = document.querySelector('.top-menu-js');
 const main = document.querySelector('.main-js');
 
@@ -121,9 +122,7 @@ menuLinks.forEach(link => link.addEventListener('click', closeSideMenu))
 
 
 
-
-
-for (let link of menuLinks) {
+for (let link of links) {
     link.addEventListener('click', function (e) {
         let appSections = document.querySelectorAll(".main-js section");
         for (let section of appSections) {
