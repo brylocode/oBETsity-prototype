@@ -867,7 +867,6 @@ body {
 }
 
 .close-new-chall-btn {
-  margin-left: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -877,8 +876,10 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding: 1.5rem;
+  margin-left: auto;
   outline: transparent;
-  padding: 1rem;
+  cursor: pointer;
 }
 
 .close-new-chall-btn img {
@@ -887,14 +888,14 @@ body {
 
 .new-chall__title {
   position: relative;
-  text-align: center;
-  font-size: 3.3rem;
-  margin-bottom: 1rem;
-  letter-spacing: 2px;
-  font-weight: 900;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  margin-bottom: 4rem;
+  font-size: 3.3rem;
+  letter-spacing: 2px;
+  font-weight: 900;
+  text-align: center;
 }
 
 .new-chall__title::before {
@@ -902,11 +903,11 @@ body {
   position: absolute;
   left: 1rem;
   right: 1rem;
-  height: 1rem;
-  z-index: -1;
   bottom: 1rem;
-  background-color: #FFC312;
+  z-index: -1;
+  height: 1rem;
   border-radius: 10rem;
+  background-color: #FFC312;
 }
 
 .new-chall__form {
@@ -934,9 +935,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  min-width: 30rem;
+  min-width: 25rem;
   padding: .5rem;
   margin-bottom: 0.2rem;
 }
@@ -946,9 +945,9 @@ body {
 .new-chall__value label,
 .new-chall__bet label,
 .new-chall__time-left label {
-  font-weight: 700;
-  font-size: 2rem;
   margin-bottom: .5rem;
+  font-size: 2rem;
+  font-weight: 700;
 }
 
 .new-chall__who input,
@@ -958,12 +957,12 @@ body {
 .new-chall__time-left input {
   padding: .5rem;
   padding-right: 3rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10rem;
   font-size: 2.1rem;
   font-weight: 800;
   font-family: inherit;
   text-align: right;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 10rem;
   -webkit-box-shadow: 0 7px 30px -20px #96aab4;
           box-shadow: 0 7px 30px -20px #96aab4;
 }
