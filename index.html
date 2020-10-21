@@ -173,6 +173,39 @@
 
 
             <section class="main__section challenges" id="challenges">
+                <div class="new-chall">
+                    <button class="btn close-new-chall-btn"><img src="assets/icons/x.svg"
+                            alt="przycisk zamknij nowe wyzwanie"></button>
+                    <h4 class="new-chall__title">NOWE WYZWANIE</h4>
+                    <form" class="new-chall__form">
+                        <div class="new-chall__who">
+                            <label for="who">Kto?</label>
+                            <input type="text" name="who" id="who" required placeholder="Wprowadź nazwę znajomego">
+                        </div>
+                        <div class="new-chall__what">
+                            <label for="what">Co?</label>
+                            <input type="text" name="what" id="what" required
+                                placeholder="Wprowadź dyscyplinę np. Pływanie">
+                        </div>
+                        <div class="new-chall__value">
+                            <label for="what">Ile?</label>
+                            <input type="text" name="what" id="what" required placeholder="">
+                        </div>
+                        <div class="new-chall__bet">
+                            <label for="bet">Bet?</label>
+                            <input type="number" name="bet" id="bet" required placeholder="Wprowadź wartość zakładu">
+                        </div>
+                        <div class="new-chall__time-left">
+                            <label for="time-left">Ile zostało czasu?</label>
+                            <input type="text" name="time-left" id="time-left" required
+                                placeholder="Wprowadź pozostały czas">
+                        </div>
+
+                        <button class=" btn new-chall-send-btn">Rzuć wyzwanie <img src="assets/icons/dice.svg"
+                                alt="kostka do gry"></button> </button>
+                        </form>
+                </div>
+
                 <h2 class="section__title">Wyzwania</h2>
                 <button class="btn throw-chall-btn">Rzuć wyzwanie <img src="assets/icons/dice.svg"
                         alt="kostka do gry"></button>
@@ -273,7 +306,7 @@
                             </div>
                             <span class="chall__time-left">Ended</span>
                         </div>
-                        <span class="chall__bet">-50 <img src="assets/icons/cube.svg" alt="ikona waluty"></span>
+                        <span class="chall__bet">-50 <img src="assets/icons/cube-green.svg" alt="ikona waluty"></span>
                     </div>
                     <div class="chall__footer">
                     </div>
@@ -295,7 +328,7 @@
                             </div>
                             <span class="chall__time-left">Ended</span>
                         </div>
-                        <span class="chall__bet">-20 <img src="assets/icons/cube.svg" alt="ikona waluty"></span>
+                        <span class="chall__bet">-20 <img src="assets/icons/cube-green.svg" alt="ikona waluty"></span>
                     </div>
                     <div class="chall__footer">
                     </div>
@@ -318,7 +351,7 @@
                             </div>
                             <span class="chall__time-left">Ended</span>
                         </div>
-                        <span class="chall__bet">+50 <img src="assets/icons/cube.svg" alt="ikona waluty"></span>
+                        <span class="chall__bet">+50 <img src="assets/icons/cube-red.svg" alt="ikona waluty"></span>
                     </div>
                     <div class="chall__footer">
                     </div>
