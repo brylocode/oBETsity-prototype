@@ -21,7 +21,7 @@
 
                         <div class="login__username">
                             <label for="username">Nazwa użytkownika lub email</label>
-                            <input type="text" name="username" id="username" required>
+                            <input type="text" name="username" id="username" value="Jan Nowak" required>
                         </div>
                         <div class="login__password">
                             <label for="password">Hasło</label>
@@ -173,69 +173,45 @@
 
 
             <section class="main__section challenges" id="challenges">
-                <div class="new-chall">
-                    <button class="btn close-new-chall-btn"><img src="assets/icons/x.svg"
+                <div class="new-chall-modal new-chall-modal-js">
+                    <button class="btn close-new-chall-btn close-new-chall-btn-js"><img src="assets/icons/x.svg"
                             alt="przycisk zamknij nowe wyzwanie"></button>
                     <h4 class="new-chall__title">NOWE WYZWANIE</h4>
                     <form" class="new-chall__form">
                         <div class="new-chall__who">
                             <label for="who">Kto?</label>
-                            <input type="text" name="who" id="who" required placeholder="Wprowadź nazwę znajomego">
+                            <input type="text" name="who" id="who" required placeholder="Nick znajomego">
                         </div>
                         <div class="new-chall__what">
                             <label for="what">Co?</label>
-                            <input type="text" name="what" id="what" required
-                                placeholder="Wprowadź dyscyplinę np. Pływanie">
+                            <input type="text" name="what" id="what" required placeholder="np. Pływanie">
                         </div>
                         <div class="new-chall__value">
-                            <label for="what">Ile?</label>
-                            <input type="text" name="what" id="what" required placeholder="">
+                            <label for="value">Ile?</label>
+                            <input type="text" name="value" id="value" required placeholder="np. 45 minut">
                         </div>
                         <div class="new-chall__bet">
                             <label for="bet">Bet?</label>
-                            <input type="number" name="bet" id="bet" required placeholder="Wprowadź wartość zakładu">
+                            <input type="number" name="bet" id="bet" required
+                                placeholder="Stawka zakładu (kostki cukru)">
                         </div>
                         <div class="new-chall__time-left">
                             <label for="time-left">Ile zostało czasu?</label>
                             <input type="text" name="time-left" id="time-left" required
-                                placeholder="Wprowadź pozostały czas">
+                                placeholder="Czas do końca wyzwania">
                         </div>
 
-                        <button class=" btn new-chall-send-btn">Rzuć wyzwanie <img src="assets/icons/dice.svg"
-                                alt="kostka do gry"></button> </button>
+                        <button class=" btn throw-chall-btn throw-chall-btn-js">Rzuć wyzwanie <img
+                                src="assets/icons/dice.svg" alt="kostka do gry"></button> </button>
                         </form>
                 </div>
 
                 <h2 class="section__title">Wyzwania</h2>
-                <button class="btn throw-chall-btn">Rzuć wyzwanie <img src="assets/icons/dice.svg"
+                <button class="btn new-chall-btn new-chall-btn-js">Rzuć wyzwanie <img src="assets/icons/dice.svg"
                         alt="kostka do gry"></button>
                 <h3 class="section__sub-title">Rzucone</h3>
-                <div class="challenges__in-progress">
-                    <div class="chall">
-                        <div class="chall__header">
-                            <div class="chall__what">
-                                <h5 class="chall__title">Bieganie</h5>
-                                <img src="assets/icons/target.svg" alt="ikona wyzwania" class="chall__icon">
-                            </div>
-                            <span class="chall__value">0/5 km</span>
-                        </div>
-                        <div class="chall__body">
-                            <div class="chall__who">
-                                <div class="user">
-                                    <img src="assets/icons/user.svg" class="user__avatar avatar-orange"
-                                        alt="avatar użytkownika">
-                                    <a href="#friends" class="user__name">Paweł</a>
-                                </div>
-                                <span class="chall__time-left">36 hours left</span>
-                            </div>
-                            <span class="chall__bet">20 <img src="assets/icons/cube.svg" alt="ikona waluty"></span>
-                        </div>
-                        <div class="chall__footer">
-                            <button class="btn start-chall-btn">Rozpocznij <img src="assets/icons/alarm.svg"
-                                    alt="ikona stopera">
-                            </button>
-                        </div>
-                    </div>
+                <div class="challenges__in-progress challenges__in-progress-js">
+
                     <div class="chall">
                         <div class="chall__header">
                             <div class="chall__what">
@@ -251,7 +227,7 @@
                                         alt="avatar użytkownika">
                                     <a href="#friends" class="user__name">Kasia</a>
                                 </div>
-                                <span class="chall__time-left">3 days left</span>
+                                <span class="chall__time-left">zostały 3 dni</span>
                             </div>
                             <span class="chall__bet">10 <img src="assets/icons/cube.svg" alt="ikona waluty"></span>
                         </div>
@@ -277,9 +253,34 @@
                                         alt="avatar użytkownika">
                                     <a href="#friends" class="user__name">Marysia</a>
                                 </div>
-                                <span class="chall__time-left">7 days left</span>
+                                <span class="chall__time-left"> zostały 2 dni</span>
                             </div>
                             <span class="chall__bet">50 <img src="assets/icons/cube.svg" alt="ikona waluty"></span>
+                        </div>
+                        <div class="chall__footer">
+                            <button class="btn start-chall-btn">Rozpocznij <img src="assets/icons/alarm.svg"
+                                    alt="ikona stopera">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="chall">
+                        <div class="chall__header">
+                            <div class="chall__what">
+                                <h5 class="chall__title">Bieganie</h5>
+                                <img src="assets/icons/target.svg" alt="ikona wyzwania" class="chall__icon">
+                            </div>
+                            <span class="chall__value">0/5 km</span>
+                        </div>
+                        <div class="chall__body">
+                            <div class="chall__who">
+                                <div class="user">
+                                    <img src="assets/icons/user.svg" class="user__avatar avatar-orange"
+                                        alt="avatar użytkownika">
+                                    <a href="#friends" class="user__name">Paweł</a>
+                                </div>
+                                <span class="chall__time-left">zostały 24 godziny</span>
+                            </div>
+                            <span class="chall__bet">20 <img src="assets/icons/cube.svg" alt="ikona waluty"></span>
                         </div>
                         <div class="chall__footer">
                             <button class="btn start-chall-btn">Rozpocznij <img src="assets/icons/alarm.svg"

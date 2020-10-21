@@ -9,25 +9,10 @@ const signOutBtn = document.querySelector('.sign-out-btn-js');
 const nickName = document.querySelector('.user__name');
 
 let loggedUser = {
-    username,
+    username: '',
     avatar: '',
     currency: 1000,
-    friends: [{
-            id: 1,
-            username: 'Monika',
-            avatar: 'https://randomuser.me/api/portraits/women/33.jpg',
-        },
-        {
-            id: 2,
-            username: 'Robert',
-            avatar: 'https://randomuser.me/api/portraits/men/28.jpg',
-        },
-        {
-            id: 3,
-            username: 'Natalia',
-            avatar: 'https://randomuser.me/api/portraits/women/21.jpg',
-        }
-    ],
+    friends: [],
     achievements: [],
 };
 
@@ -135,4 +120,119 @@ for (let link of links) {
     });
 }
 
-//dashboard
+//challenges
+
+const newChallBtn = document.querySelector('.new-chall-btn-js');
+const throwChallBtn = document.querySelector('.throw-chall-btn-js');
+const closeNewChallBtn = document.querySelector('.close-new-chall-btn-js');
+const newChallModal = document.querySelector('.new-chall-modal-js');
+
+const newChallFormInputs = document.querySelectorAll('.new-chall__form label+input');
+
+const whoNewChallInput = document.querySelector('input#who');
+const whatNewChallInput = document.querySelector('input#what');
+const valueNewChallInput = document.querySelector('input#value');
+const betNewChallInput = document.querySelector('input#bet');
+const timeLeftNewChallInput = document.querySelector('input#time-left');
+
+const challengesInProgressSection = document.querySelector('.challenges__in-progress-js');
+
+
+const handleOpenNewChallModal = () => {
+    newChallModal.style.display = 'flex';
+}
+
+const handleCloseNewChallModal = () => {
+    newChallModal.style.display = 'none';
+    clearNewChallModalInputs();
+}
+
+const checkNewChallForm = () => {
+    if (whoNewChallInput.value === '') {
+        alert('wprowadź odbiorcę wyzwania');
+    } else if (whatNewChallInput.value === '') {
+        alert('wprowadź konkurencję wyzwania');
+    } else if (whatNewChallInput.value === '') {
+        alert('wprowadź konkurencję wyzwania');
+    } else if (valueNewChallInput.value === '') {
+        alert('wprowadź jednostkę wyzwania');
+    } else if (betNewChallInput.value === '') {
+        alert('wprowadź stawkę wyzwania');
+    } else if (timeLeftNewChallInput.value === '') {
+        alert('wprowadź czas do końca wyzwania');
+    } else {
+        createNewChall();
+    }
+}
+
+const clearNewChallModalInputs = () => {
+    newChallFormInputs.forEach(input => input.value = '');
+}
+
+
+const createNewChall = () => {
+    const newChall = document.createElement('div');
+    newChall.classList.add('chall');
+
+    newChall.innerHTML = `
+        <div class="chall__header">
+            <div class="chall__what">
+                <h5 class="chall__title">${whatNewChallInput.value}</h5>
+                <img src="assets/icons/target.svg" alt="ikona wyzwania" class="chall__icon">
+            </div>
+            <span class="chall__value">0/${valueNewChallInput.value}</span>
+        </div>
+        <div class="chall__body">
+            <div class="chall__who">
+                <div class="user">
+                    <img src="assets/icons/user.svg" class="user__avatar avatar-cream"
+                        alt="avatar użytkownika">
+                    <a href="#friends" class="user__name">${whoNewChallInput.value}</a>
+                </div>
+                <span class="chall__time-left">zostały ${timeLeftNewChallInput.value}</span>
+            </div>
+            <span class="chall__bet">${betNewChallInput.value} <img src="assets/icons/cube.svg" alt="ikona waluty"></span>
+        </div>
+        <div class="chall__footer">
+            <button class="btn start-chall-btn">Rozpocznij <img src="assets/icons/alarm.svg"
+                    alt="ikona stopera">
+            </button>
+        </div>
+    `
+    alert(`Rzuciłeś wyzwanie:
+
+    >kategoria: ${whatNewChallInput.value} 
+    >wartość: ${valueNewChallInput.value}
+    >stawka: ${betNewChallInput.value} kostek cukru
+    >czas: ${timeLeftNewChallInput.value}
+    
+    Poczekaj aż ${whoNewChallInput.value} potwierdzi wyzwanie.`);
+
+    let res = confirm(`*${whoNewChallInput.value.toUpperCase()} DOSTAJE TAKIE POWIADOMIENIE W SWOJEJ APLIKACJI*
+
+    ${loggedUser.username} rzuca ci wyzwanie:
+
+    >kategoria: ${whatNewChallInput.value}
+    >wartość: ${valueNewChallInput.value}
+    >stawka: ${betNewChallInput.value} kostek cukru
+    >czas: ${timeLeftNewChallInput.value}
+
+    Czy akceptujesz wyzwanie?
+    `)
+
+    if (res == true) {
+        alert(`Hurra... Użytkownik: ${whoNewChallInput.value} zaakceptował Twoje wyzwanie :) 
+        Wyzwanie zostało dodane do sekcji "Rzucone".
+        Aby rozpocząć wyzwanie kliknij na karcie wyzwania przycisk "Rozpocznij".
+        Teraz czas na Ciebie, działaj tak żeby wygrać ;)`)
+        challengesInProgressSection.appendChild(newChall);
+        handleCloseNewChallModal();
+    } else {
+        alert(`Niestety... Rywal wymiękł i nie zaakceptował Twjego wyzwania :( 
+            Spróbuj za niedługo ponownie :)`)
+    }
+}
+
+newChallBtn.addEventListener('click', handleOpenNewChallModal);
+closeNewChallBtn.addEventListener('click', handleCloseNewChallModal);
+throwChallBtn.addEventListener('click', checkNewChallForm);

@@ -624,7 +624,17 @@ body {
       flex-wrap: wrap;
 }
 
-.throw-chall-btn {
+.challenges__in-progress {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
+
+.new-chall-btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -649,7 +659,7 @@ body {
           box-shadow: 0 7px 30px -10px #96aab4;
 }
 
-.throw-chall-btn img {
+.new-chall-btn img {
   margin-left: 1rem;
   -webkit-transition: -webkit-transform .3s;
   transition: -webkit-transform .3s;
@@ -657,12 +667,12 @@ body {
   transition: transform .3s, -webkit-transform .3s;
 }
 
-.throw-chall-btn:hover {
+.new-chall-btn:hover {
   -webkit-filter: brightness(120%);
           filter: brightness(120%);
 }
 
-.throw-chall-btn:hover img {
+.new-chall-btn:hover img {
   -webkit-transform: translateX(0.5rem);
           transform: translateX(0.5rem);
 }
@@ -843,16 +853,14 @@ body {
   display: none;
 }
 
-.new-chall {
+.new-chall-modal {
   position: fixed;
   top: 0;
   bottom: 0;
   right: 0;
   left: 0;
   z-index: 1000;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -861,7 +869,7 @@ body {
 }
 
 @media (max-width: 813px) {
-  .new-chall {
+  .new-chall-modal {
     overflow-y: scroll;
   }
 }
@@ -963,8 +971,8 @@ body {
   font-weight: 800;
   font-family: inherit;
   text-align: right;
-  -webkit-box-shadow: 0 7px 30px -20px #96aab4;
-          box-shadow: 0 7px 30px -20px #96aab4;
+  -webkit-box-shadow: 0 7px 30px -15px #96aab4;
+          box-shadow: 0 7px 30px -15px #96aab4;
 }
 
 .new-chall__who input::-webkit-input-placeholder,
@@ -1009,11 +1017,11 @@ body {
 .new-chall__bet input:focus,
 .new-chall__time-left input:focus {
   outline: transparent;
-  -webkit-box-shadow: 0 0 0 2px #FFC312, 0 7px 30px -20px #FFC312;
-          box-shadow: 0 0 0 2px #FFC312, 0 7px 30px -20px #FFC312;
+  -webkit-box-shadow: 0 0 0 2px #FFC312, 0 7px 30px -15px #FFC312;
+          box-shadow: 0 0 0 2px #FFC312, 0 7px 30px -15px #FFC312;
 }
 
-.new-chall-send-btn {
+.throw-chall-btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1039,7 +1047,7 @@ body {
           box-shadow: 0 7px 30px -10px #96aab4;
 }
 
-.new-chall-send-btn img {
+.throw-chall-btn img {
   margin-left: 1rem;
   -webkit-transition: -webkit-transform .3s;
   transition: -webkit-transform .3s;
@@ -1047,12 +1055,12 @@ body {
   transition: transform .3s, -webkit-transform .3s;
 }
 
-.new-chall-send-btn:hover {
+.throw-chall-btn:hover {
   -webkit-filter: brightness(120%);
           filter: brightness(120%);
 }
 
-.new-chall-send-btn:hover img {
+.throw-chall-btn:hover img {
   -webkit-transform: translateX(0.5rem);
           transform: translateX(0.5rem);
 }

@@ -1,4 +1,10 @@
-.throw-chall-btn {
+.challenges__in-progress {
+    display: flex;
+    flex-direction: column-reverse;
+
+}
+
+.new-chall-btn {
     display: flex;
     align-items: center;
     padding-left: 3rem;
@@ -185,14 +191,14 @@
 
 // new challenge modal
 
-.new-chall {
+.new-chall-modal {
     position: fixed;
     top: 0;
     bottom: 0;
     right: 0;
     left: 0;
     z-index: 1000;
-    display: flex;
+    display: none;
     flex-direction: column;
     background-color: #fff;
 
@@ -269,7 +275,7 @@
         font-weight: 800;
         font-family: inherit;
         text-align: right;
-        box-shadow: 0 7px 30px -20px rgb(150, 170, 180);
+        box-shadow: 0 7px 30px -15px rgb(150, 170, 180);
 
         &::placeholder {
             font-size: 1.4rem;
@@ -279,12 +285,12 @@
         &:focus {
             outline: transparent;
             box-shadow: 0 0 0 2px $bg-yellow,
-                0 7px 30px -20px $bg-yellow;
+                0 7px 30px -15px $bg-yellow;
         }
     }
 }
 
-.new-chall-send-btn {
+.throw-chall-btn {
     display: flex;
     align-items: center;
     padding-left: 3rem;
