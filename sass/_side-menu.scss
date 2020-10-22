@@ -26,6 +26,13 @@
     transform: translate(0, 0);
 }
 
+.app-name {
+    font-family: $logo-font;
+    // margin-left: 2rem;
+    font-size: 2.9rem;
+    font-weight: 900;
+}
+
 .side-menu__header {
     display: flex;
     justify-content: space-between;
@@ -34,12 +41,6 @@
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     padding: .5rem 1rem;
 
-    .app-name {
-        font-family: $logo-font;
-        // margin-left: 2rem;
-        font-size: 2.9rem;
-        font-weight: 900;
-    }
 
     .side-menu__toggle-open-icon {
         padding: 0.5rem;

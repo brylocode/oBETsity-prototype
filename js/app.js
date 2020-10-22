@@ -2,11 +2,19 @@
 
 const usernameInput = document.querySelector('#username');
 const passwordInput = document.querySelector('#password');
+
 const signOutContent = document.querySelector('.sign-out-content-js');
 const signInContent = document.querySelector('.sign-in-content-js');
+
 const signInBtn = document.querySelector('.login__sign-in-btn-js');
 const signOutBtn = document.querySelector('.sign-out-btn-js');
-const nickName = document.querySelector('.user__name');
+
+const userNameTopMenuBox = document.querySelector('.user__name-js');
+const userCurrencyBox = document.querySelector('.currency__value-js');
+const userNameDashboardBox = document.querySelector('.dashboard__username-js')
+
+
+console.log(userNameTopMenuBox)
 
 let loggedUser = {
     username: '',
@@ -31,22 +39,36 @@ const showError = (error) => {
     alert(error);
 }
 
-const handleSignIn = (username) => {
-    loggedUser.username = username;
-    console.log(loggedUser.username)
-    nickName.textContent = `${loggedUser.username}`;
+const handleFetchUserData = loggedUser => {
+    userNameTopMenuBox.textContent = `${loggedUser.username}`;
+    userCurrencyBox.textContent = `${loggedUser.currency}`;
+    userNameDashboardBox.textContent = `${loggedUser.username}`;
+}
+
+
+const handleSignIn = loggedUser => {
+    handleFetchUserData(loggedUser);
     showSignedInContent();
 }
 
 const getUsernameAndPassword = () => {
     const username = usernameInput.value;
     const password = passwordInput.value;
+
+    loggedUser = {
+        username: username,
+        avatar: '',
+        currency: 984,
+        friends: [],
+        achievements: [],
+    }
     if (username === '') {
         showError('wpisz nazwę użytkownika...');
     } else if (username.length >= 10) {
         showError('nazwa użytkownika nie może być dłuższa niż 10');
     } else {
-        handleSignIn(username);
+
+        handleSignIn(loggedUser);
     }
 }
 
@@ -54,7 +76,16 @@ const getUsernameAndPassword = () => {
 const logOut = () => {
     usernameInput.value = '';
     passwordInput.value = '';
-    nickName.textContent = ``;
+    userNameTopMenuBox.textContent = ``;
+
+    loggedUser = {
+        username: '',
+        avatar: '',
+        currency: 1000,
+        friends: [],
+        achievements: [],
+    };
+
     showSignedOutContent();
     closeSideMenu();
 }

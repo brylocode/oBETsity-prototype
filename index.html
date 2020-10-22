@@ -15,13 +15,14 @@
     <div class="sign-out-content sign-out-content-js">
         <div class="login">
             <div class="login__container">
+                <h2 class="app-name">oBETsity</h2>
                 <form>
                     <div class="login__top">
                         <h4 class="login__title">Zaloguj się do swojego konta</h4>
 
                         <div class="login__username">
                             <label for="username">Nazwa użytkownika lub email</label>
-                            <input type="text" name="username" id="username" value="Jan Nowak" required>
+                            <input type="text" name="username" id="username" required>
                         </div>
                         <div class="login__password">
                             <label for="password">Hasło</label>
@@ -48,11 +49,11 @@
         <nav class="top-menu top-menu-js">
             <div class="currency">
                 <img src="assets/icons/cube.svg" class="currency__icon" alt="ikona waluty">
-                <p class="currency__value">1000</p>
+                <p class="currency__value currency__value-js"></p>
             </div>
             <div class="user">
                 <img src="assets/icons/user.svg" class="user__avatar" alt="avatar użytkownika">
-                <a href="#dashboard" class="user__name">JanNowak</a>
+                <a href="#dashboard" class="user__name user__name-js"></a>
             </div>
             <div class="notification" data-badge="1"></div>
         </nav>
@@ -115,7 +116,8 @@
         </nav>
         <main class="main main-js">
             <section class="main__section dashboard" id="dashboard">
-                <h2 class="section__title">Witaj z powrotem <span class="dashboard__username">JanNowak!</span>
+                <h2 class="section__title">Witaj z powrotem <span
+                        class="dashboard__username dashboard__username-js"></span>!
                 </h2>
                 <!-- <h3 class="dashboard__section-title">Wyzwania</h3>
                 <div class="dashboard__challenges">

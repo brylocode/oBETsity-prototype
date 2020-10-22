@@ -29,11 +29,11 @@ body {
 }
 
 .sign-out-content {
-  display: none;
+  display: block;
 }
 
 .sign-in-content {
-  display: block;
+  display: none;
   padding-top: 7rem;
   padding-left: 7rem;
   overflow-x: hidden;
@@ -67,6 +67,17 @@ body {
       -ms-flex-align: center;
           align-items: center;
   padding: 1rem 2rem;
+}
+
+.login__container .app-name {
+  font-size: 4rem;
+  margin: 3rem 0;
+}
+
+@media (min-width: 576px) {
+  .login__container .app-name {
+    font-size: 6rem;
+  }
 }
 
 .login__top {
@@ -439,6 +450,12 @@ body {
           transform: translate(0, 0);
 }
 
+.app-name {
+  font-family: "Krona One", sans-serif;
+  font-size: 2.9rem;
+  font-weight: 900;
+}
+
 .side-menu__header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -452,12 +469,6 @@ body {
   line-height: 6rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   padding: .5rem 1rem;
-}
-
-.side-menu__header .app-name {
-  font-family: "Krona One", sans-serif;
-  font-size: 2.9rem;
-  font-weight: 900;
 }
 
 .side-menu__header .side-menu__toggle-open-icon {
@@ -609,7 +620,7 @@ body {
   font-size: 2.5rem;
 }
 
-#challenges {
+#dashboard {
   display: block;
 }
 
