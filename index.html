@@ -233,7 +233,7 @@
                             <span class="chall__bet">10 <img src="assets/icons/cube.svg" alt="ikona waluty"></span>
                         </div>
                         <div class="chall__footer">
-                            <button class="btn start-chall-btn">Rozpocznij <img src="assets/icons/alarm.svg"
+                            <button class="btn start-chall-btn">Rozpocznij<img src="assets/icons/alarm.svg"
                                     alt="ikona stopera">
                             </button>
                         </div>
@@ -242,7 +242,7 @@
                     <div class="chall">
                         <div class="chall__header">
                             <div class="chall__what">
-                                <h5 class="chall__title">Dzienne kalorie</h5>
+                                <h5 class="chall__title">Kalorie Dzień</h5>
                                 <img src="assets/icons/target.svg" alt="ikona wyzwania" class="chall__icon">
                             </div>
                             <span class="chall__value">0/1500 kcal</span>
@@ -316,10 +316,10 @@
                 <div class="chall chall--win">
                     <div class="chall__header">
                         <div class="chall__what">
-                            <h5 class="chall__title">Dzienny cukier</h5>
+                            <h5 class="chall__title">Dzień Chodzenie</h5>
                             <img src="assets/icons/target.svg" alt="ikona wyzwania" class="chall__icon">
                         </div>
-                        <span class="chall__value">0 g</span>
+                        <span class="chall__value">7k kroków</span>
                     </div>
                     <div class="chall__body">
                         <div class="chall__who">
@@ -339,7 +339,7 @@
                 <div class="chall chall--lose">
                     <div class="chall__header">
                         <div class="chall__what">
-                            <h5 class="chall__title">Dzienny cukier</h5>
+                            <h5 class="chall__title">Cukier Dzień</h5>
                             <img src="assets/icons/target.svg" alt="ikona wyzwania" class="chall__icon">
                         </div>
                         <span class="chall__value">20/15 g</span>
@@ -460,9 +460,112 @@
             </section>
             <section class="main__section friends" id="friends">
                 <h2 class="section__title">Znajomi</h2>
+
+                <button class="btn add-new-friend-btn add-new-friend-btn-js">Dodaj znajomego <img
+                        src="assets/icons/user-plus.svg" alt="ikona dodaj znajomego"></button>
+
+                <div class="new-friend-modal new-friend-modal-js">
+
+                    <button class="btn close-new-friend-btn close-new-friend-btn-js"><img src="assets/icons/x.svg"
+                            alt="przycisk zamknij nowe wyzwanie"></button>
+                    <h4 class="new-friend__title">Nowy znajomy</h4>
+                    <form" class="new-friend__form">
+                        <div class="new-friend__username">
+                            <label for="friend__username">Kto?</label>
+                            <input type="text" name="friend__username" id="friend__username" required
+                                placeholder="Nick znajomego">
+                        </div>
+
+
+                        <button class="btn add-new-friend-btn add-new-friend-confirm-btn-js">Dodaj znajomego <img
+                                src="assets/icons/user-plus.svg" alt="ikona dodaj znajomego"></button>
+                        </form>
+
+                </div>
+
+                <div class="friends__container friends__container-js">
+                    <div class="friend">
+                        <div class="friend__intro">
+                            <img src="assets/icons/user.svg" class="user__avatar avatar-pink" alt="avatar użytkownika">
+                            <span href="#friends" class="friend__name">Basia</span>
+                        </div>
+                        <a href="#challenges" class=" btn friend__chall-btn">
+                            Wyzwij <img src="assets/icons/target.svg" alt="ikona wyzwania">
+                        </a>
+                    </div>
+                    <div class="friend">
+                        <div class="friend__intro">
+                            <img src="assets/icons/user.svg" class="user__avatar avatar-cream" alt="avatar użytkownika">
+                            <span href="#friends" class="friend__name">Monika</span>
+                        </div>
+                        <a href="#challenges" class=" btn friend__chall-btn">
+                            Wyzwij <img src="assets/icons/target.svg" alt="ikona wyzwania">
+                        </a>
+                    </div>
+                    <div class="friend">
+                        <div class="friend__intro">
+                            <img src="assets/icons/user.svg" class="user__avatar avatar-orange"
+                                alt="avatar użytkownika">
+                            <span href="#friends" class="friend__name">Kamil</span>
+                        </div>
+                        <a href="#challenges" class=" btn friend__chall-btn">
+                            Wyzwij <img src="assets/icons/target.svg" alt="ikona wyzwania">
+                        </a>
+                    </div>
+                    <div class="friend">
+                        <div class="friend__intro">
+                            <img src="assets/icons/user.svg" class="user__avatar avatar-cream" alt="avatar użytkownika">
+                            <span href="#friends" class="friend__name">Paulina</span>
+                        </div>
+                        <a href="#challenges" class=" btn friend__chall-btn">
+                            Wyzwij <img src="assets/icons/target.svg" alt="ikona wyzwania">
+                        </a>
+                    </div>
+                    <div class="friend">
+                        <div class="friend__intro">
+                            <img src="assets/icons/user.svg" class="user__avatar avatar-light-green"
+                                alt="avatar użytkownika">
+                            <span href="#friends" class="friend__name">Mateusz</span>
+                        </div>
+                        <a href="#challenges" class=" btn friend__chall-btn">
+                            Wyzwij <img src="assets/icons/target.svg" alt="ikona wyzwania">
+                        </a>
+                    </div>
+                    <div class="friend">
+                        <div class="friend__intro">
+                            <img src="assets/icons/user.svg" class="user__avatar avatar-lavend"
+                                alt="avatar użytkownika">
+                            <span href="#friends" class="friend__name">Marek</span>
+                        </div>
+                        <a href="#challenges" class=" btn friend__chall-btn">
+                            Wyzwij <img src="assets/icons/target.svg" alt="ikona wyzwania">
+                        </a>
+                    </div>
+                    <div class="friend">
+                        <div class="friend__intro">
+                            <img src="assets/icons/user.svg" class="user__avatar avatar-orange"
+                                alt="avatar użytkownika">
+                            <span href="#friends" class="friend__name">Justyna</span>
+                        </div>
+                        <a href="#challenges" class=" btn friend__chall-btn">
+                            Wyzwij <img src="assets/icons/target.svg" alt="ikona wyzwania">
+                        </a>
+                    </div>
+                    <div class="friend">
+                        <div class="friend__intro">
+                            <img src="assets/icons/user.svg" class="user__avatar avatar-pink" alt="avatar użytkownika">
+                            <span href="#friends" class="friend__name">Agata</span>
+                        </div>
+                        <a href="#challenges" class=" btn friend__chall-btn">
+                            Wyzwij <img src="assets/icons/target.svg" alt="ikona wyzwania">
+                        </a>
+                    </div>
+                </div>
             </section>
             <section class="main__section achievements" id="achievements">
                 <h2 class="section__title">Osiągnięcia</h2>
+                <p class="achievements__alert">Twoje pierwsze osiągnięcie zostanie odblokowane za
+                    niedługo...</p>
             </section>
             <section class="main__section rewards" id="rewards">
                 <h2 class="section__title">Nagrody</h2>

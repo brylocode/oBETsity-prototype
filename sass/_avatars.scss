@@ -1,0 +1,33 @@
+.user__avatar {
+    display: block;
+    height: 3rem;
+    margin-right: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.01);
+    border-radius: 50%;
+    background-color: $bg-light-gray;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+        rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    cursor: pointer;
+
+
+
+    &.avatar-pink {
+        background-color: $bg-pink;
+    }
+
+    &.avatar-light-green {
+        background-color: $bg-light-green;
+    }
+
+    &.avatar-cream {
+        background-color: $bg-cream;
+    }
+
+    &.avatar-orange {
+        background-color: $bg-orange;
+    }
+
+    &.avatar-lavend {
+        background-color: $bg-lavend;
+    }
+}

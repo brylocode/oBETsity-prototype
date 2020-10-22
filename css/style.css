@@ -28,6 +28,38 @@ body {
   transition: .2s background-color;
 }
 
+.user__avatar {
+  display: block;
+  height: 3rem;
+  margin-right: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.01);
+  border-radius: 50%;
+  background-color: #DEE3F0;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+          box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  cursor: pointer;
+}
+
+.user__avatar.avatar-pink {
+  background-color: #fd79a8;
+}
+
+.user__avatar.avatar-light-green {
+  background-color: #00b894;
+}
+
+.user__avatar.avatar-cream {
+  background-color: #ffeaa7;
+}
+
+.user__avatar.avatar-orange {
+  background-color: #e17055;
+}
+
+.user__avatar.avatar-lavend {
+  background-color: #786fa6;
+}
+
 .sign-out-content {
   display: block;
 }
@@ -337,34 +369,6 @@ body {
   font-size: 2rem;
   font-weight: 800;
   cursor: pointer;
-}
-
-.user__avatar {
-  display: block;
-  height: 3rem;
-  margin-right: 1rem;
-  border: 1px solid rgba(0, 0, 0, 0.01);
-  border-radius: 50%;
-  background-color: #DEE3F0;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
-          box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
-  cursor: pointer;
-}
-
-.user__avatar.avatar-pink {
-  background-color: #fd79a8;
-}
-
-.user__avatar.avatar-light-green {
-  background-color: #00b894;
-}
-
-.user__avatar.avatar-cream {
-  background-color: #ffeaa7;
-}
-
-.user__avatar.avatar-orange {
-  background-color: #e17055;
 }
 
 .user__name {
@@ -1208,5 +1212,251 @@ body {
   border-radius: 10rem;
   font-weight: 900;
   border: 2px solid #000;
+}
+
+.friends__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
+
+.add-new-friend-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  border-radius: 10rem;
+  margin: 2rem auto;
+  font-size: 1.9rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  background-color: #12CBC4;
+  -webkit-transition: -webkit-filter .3s;
+  transition: -webkit-filter .3s;
+  transition: filter .3s;
+  transition: filter .3s, -webkit-filter .3s;
+  outline: transparent;
+  cursor: pointer;
+  -webkit-box-shadow: 0 7px 30px -10px #96aab4;
+          box-shadow: 0 7px 30px -10px #96aab4;
+}
+
+.add-new-friend-btn img {
+  margin-left: 1rem;
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+}
+
+.add-new-friend-btn:hover {
+  -webkit-filter: brightness(120%);
+          filter: brightness(120%);
+}
+
+.add-new-friend-btn:hover img {
+  -webkit-transform: translateX(0.5rem);
+          transform: translateX(0.5rem);
+}
+
+.new-friend-modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #fff;
+}
+
+@media (max-width: 813px) {
+  .new-friend-modal {
+    overflow-y: scroll;
+  }
+}
+
+.close-new-friend-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1.5rem;
+  margin-left: auto;
+  outline: transparent;
+  cursor: pointer;
+}
+
+.close-new-friend-btn img {
+  height: 4rem;
+}
+
+.new-friend__title {
+  position: relative;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-bottom: 4rem;
+  font-size: 3.3rem;
+  letter-spacing: 2px;
+  font-weight: 900;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.new-friend__title::before {
+  content: '';
+  position: absolute;
+  left: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: -1;
+  height: 1rem;
+  border-radius: 10rem;
+  background-color: #FFC312;
+}
+
+.new-friend__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.new-friend__username {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-width: 25rem;
+  padding: .5rem;
+  margin-bottom: 3rem;
+}
+
+.new-friend__username label {
+  margin-bottom: .5rem;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.new-friend__username input {
+  padding: .5rem;
+  padding-right: 3rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10rem;
+  font-size: 2.1rem;
+  font-weight: 800;
+  font-family: inherit;
+  text-align: right;
+  -webkit-box-shadow: 0 7px 30px -15px #96aab4;
+          box-shadow: 0 7px 30px -15px #96aab4;
+}
+
+.new-friend__username input::-webkit-input-placeholder {
+  font-size: 1.4rem;
+  opacity: .3;
+}
+
+.new-friend__username input:-ms-input-placeholder {
+  font-size: 1.4rem;
+  opacity: .3;
+}
+
+.new-friend__username input::-ms-input-placeholder {
+  font-size: 1.4rem;
+  opacity: .3;
+}
+
+.new-friend__username input::placeholder {
+  font-size: 1.4rem;
+  opacity: .3;
+}
+
+.new-friend__username input:focus {
+  outline: transparent;
+  -webkit-box-shadow: 0 0 0 2px #FFC312, 0 7px 30px -15px #FFC312;
+          box-shadow: 0 0 0 2px #FFC312, 0 7px 30px -15px #FFC312;
+}
+
+.friend {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1rem;
+  -webkit-box-shadow: 0 7px 30px -10px #96aab4;
+          box-shadow: 0 7px 30px -10px #96aab4;
+  border-radius: 10rem;
+  margin: 1rem 0;
+}
+
+.friend__intro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 2rem;
+}
+
+.friend__name {
+  font-weight: 900;
+}
+
+.friend__chall-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.friend__chall-btn img {
+  margin-left: 0.5rem;
+}
+
+.achiements {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.achievements__alert {
+  text-align: center;
+  font-size: 2rem;
+  opacity: .2;
 }
 /*# sourceMappingURL=style.css.map */

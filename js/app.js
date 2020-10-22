@@ -14,7 +14,6 @@ const userCurrencyBox = document.querySelector('.currency__value-js');
 const userNameDashboardBox = document.querySelector('.dashboard__username-js')
 
 
-console.log(userNameTopMenuBox)
 
 let loggedUser = {
     username: '',
@@ -167,7 +166,9 @@ const betNewChallInput = document.querySelector('input#bet');
 const timeLeftNewChallInput = document.querySelector('input#time-left');
 
 const challengesInProgressSection = document.querySelector('.challenges__in-progress-js');
-
+const challengesWinSection = document.querySelector('.challenges__won-js');
+const challengesLoseSection = document.querySelector('.challenges__lose-js');
+let challengesInProgressStartBtnsArr = document.querySelectorAll('.challenges__in-progress-js .chall button');;
 
 const handleOpenNewChallModal = () => {
     newChallModal.style.display = 'flex';
@@ -230,40 +231,162 @@ const createNewChall = () => {
             </button>
         </div>
     `
-    alert(`Rzuciłeś wyzwanie:
+    alert(`
+    Rzuciłeś wyzwanie:
 
-    >kategoria: ${whatNewChallInput.value} 
-    >wartość: ${valueNewChallInput.value}
-    >stawka: ${betNewChallInput.value} kostek cukru
-    >czas: ${timeLeftNewChallInput.value}
+        >kategoria: ${whatNewChallInput.value} 
+        >wartość: ${valueNewChallInput.value}
+        >stawka: ${betNewChallInput.value} kostek cukru
+        >czas: ${timeLeftNewChallInput.value}
     
-    Poczekaj aż ${whoNewChallInput.value} potwierdzi wyzwanie.`);
+    Poczekaj aż ${whoNewChallInput.value} potwierdzi wyzwanie.
+    `);
 
-    let res = confirm(`*${whoNewChallInput.value.toUpperCase()} DOSTAJE TAKIE POWIADOMIENIE W SWOJEJ APLIKACJI*
+    let res = confirm(`
+    *${whoNewChallInput.value.toUpperCase()} DOSTAJE TAKIE POWIADOMIENIE W SWOJEJ APLIKACJI*
 
     ${loggedUser.username} rzuca ci wyzwanie:
 
-    >kategoria: ${whatNewChallInput.value}
-    >wartość: ${valueNewChallInput.value}
-    >stawka: ${betNewChallInput.value} kostek cukru
-    >czas: ${timeLeftNewChallInput.value}
+        >kategoria: ${whatNewChallInput.value}
+        >wartość: ${valueNewChallInput.value}
+        >stawka: ${betNewChallInput.value} kostek cukru
+        >czas: ${timeLeftNewChallInput.value}
 
     Czy akceptujesz wyzwanie?
     `)
 
     if (res == true) {
-        alert(`Hurra... Użytkownik: ${whoNewChallInput.value} zaakceptował Twoje wyzwanie :) 
-        Wyzwanie zostało dodane do sekcji "Rzucone".
-        Aby rozpocząć wyzwanie kliknij na karcie wyzwania przycisk "Rozpocznij".
-        Teraz czas na Ciebie, działaj tak żeby wygrać ;)`)
+        alert(`
+            Hurra... Użytkownik: ${whoNewChallInput.value} zaakceptował Twoje wyzwanie :) 
+            Wyzwanie zostało dodane do sekcji "Rzucone".
+            Aby rozpocząć wyzwanie kliknij na karcie wyzwania przycisk "Rozpocznij".
+            Teraz czas na Ciebie, działaj tak żeby wygrać ;)
+        `)
         challengesInProgressSection.appendChild(newChall);
         handleCloseNewChallModal();
     } else {
-        alert(`Niestety... Rywal wymiękł i nie zaakceptował Twjego wyzwania :( 
-            Spróbuj za niedługo ponownie :)`)
+        alert(`
+            Niestety... Rywal wymiękł i nie zaakceptował Twjego wyzwania :( 
+                
+            Spróbuj za niedługo ponownie :)
+            `)
     }
+
+    challengesInProgressStartBtnsArr = document.querySelectorAll('.challenges__in-progress-js .chall button');
+    // console.log(challengesInProgressStartBtnsArr);
 }
 
 newChallBtn.addEventListener('click', handleOpenNewChallModal);
 closeNewChallBtn.addEventListener('click', handleCloseNewChallModal);
 throwChallBtn.addEventListener('click', checkNewChallForm);
+
+const startChall = (event) => {
+    // console.log(event.target.parentNode.parentNode.innerHTML)
+    alert('ROZPOCZĄŁEŚ WYZWANIE');
+    alert('*WYZWANIE W TRAKCIE*');
+
+    const clickedChallBet = event.path[2];
+
+    // fake game
+
+    const randomNumber = Math.floor(Math.random() * (1 - 0 + 1)) + 0;
+
+    if (randomNumber === 1) {
+        alert(`
+            Hurra!!! Wygrałeś :) Jeteś coraz bliżej nagrody
+
+            Wyzwanie zostało przeniesione do Archiwum.
+        `)
+
+        clickedChallBet.style.display = 'none'
+    } else {
+        alert(`
+            Ups... Niestety rywal był lepszy. Wrócisz silniejszy, walcz dalej
+
+            Wyzwanie zostało przeniesione do Archiwum.
+         `);
+        clickedChallBet.style.display = 'none'
+    }
+
+    console.log(randomNumber)
+
+
+    // clickedChallBet.classList.add('chall--win');
+    // challengesWinSection.appendChild(clickedChallBet)
+
+    // console.log(event.path[2].childNodes[3].childNodes[3])
+
+    // event.target.textContent();
+}
+
+challengesInProgressStartBtnsArr.forEach(btn => {
+    btn.addEventListener('click', startChall)
+})
+
+
+//dodawanie znajomych
+
+
+const newFriendBtn = document.querySelector('.add-new-friend-btn-js');
+const newFriendConfirmBtn = document.querySelector('.add-new-friend-confirm-btn-js');
+const closeNewFriendBtn = document.querySelector('.close-new-friend-btn-js');
+const newFriendModal = document.querySelector('.new-friend-modal-js');
+const friendContainer = document.querySelector('.friends__container-js');
+
+const newFriendUserNameInput = document.querySelector('input#friend__username');
+
+
+
+const handleOpenNewFriendModal = () => {
+    newFriendModal.style.display = 'flex';
+}
+
+const handleCloseNewFriendModal = () => {
+    newFriendModal.style.display = 'none';
+    clearNewFriendModalInput();
+}
+
+const checkNewFriendForm = () => {
+    if (newFriendUserNameInput.value === '') {
+        alert('Wprowadź nick nowego znajomego.');
+    } else {
+        addNewFreind();
+    }
+}
+
+const clearNewFriendModalInput = () => {
+    newFriendUserNameInput.value = '';
+}
+
+const addNewFreind = () => {
+    const newFriend = document.createElement('div');
+    newFriend.classList.add('friend');
+
+    newFriend.innerHTML = `
+        <div class="friend__intro">
+            <img src="assets/icons/user.svg" class="user__avatar" alt="avatar użytkownika">
+            <span href="#friends" class="friend__name">${newFriendUserNameInput.value}</span>
+        </div>
+        <a href="#challenges" class=" btn friend__chall-btn">
+            Wyzwij <img src="assets/icons/target.svg" alt="ikona wyzwania">
+        </a>
+    `
+
+    alert(`
+        Masz nowego znajomego:  ${newFriendUserNameInput.value}
+    
+        Możesz od razu rzucić mu wyzwanie.
+        
+        Gotowy?
+    `)
+    friendContainer.appendChild(newFriend);
+    handleCloseNewFriendModal();
+
+}
+
+
+
+
+newFriendBtn.addEventListener('click', handleOpenNewFriendModal);
+closeNewFriendBtn.addEventListener('click', handleCloseNewFriendModal);
+newFriendConfirmBtn.addEventListener('click', checkNewFriendForm);
