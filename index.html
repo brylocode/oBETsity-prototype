@@ -42,6 +42,9 @@
                     </div>
                 </form>
             </div>
+            <p class="login__information">Jesteś w prototypie aplikacji oBETsity, aby prześć dalej wypełnij pole "Nazwa
+                użytkownika" najlepiej swoim imieniem i kliknij przycisk "Zaloguj się". Pamiętaj, że jest to prototyp,
+                czyli główne funkcje są przedstawione pokazowo, tak aby przezentowały domyślne działanie. Enjoy!</p>
         </div>
     </div>
 
@@ -119,6 +122,11 @@
                 <h2 class="section__title">Witaj z powrotem <span
                         class="dashboard__username dashboard__username-js"></span>!
                 </h2>
+
+                <div class="dashboard__chall-btn-box">
+                    <a href="#challenges" class="btn dashboard-new-chall-btn">Rzuć wyzwanie <img
+                            src="assets/icons/dice.svg" alt="kostka do gry"></a>
+                </div>
                 <!-- <h3 class="dashboard__section-title">Wyzwania</h3>
                 <div class="dashboard__challenges">
                     <div class="active-challenges">
@@ -129,42 +137,44 @@
                 </div> -->
                 <h3 class="section__sub-title">Statystyki</h3>
                 <div class="dashboard__stats">
-                    <div class="stat">
-                        <div class="stat__header">
-                            <h5 class="stat__title">Kalorie Dzisiaj</h5>
-                            <span class="stat__status neg">
-                                87%
-                            </span>
+                    <div class="stat-box">
+                        <div class="stat">
+                            <div class="stat__header">
+                                <h5 class="stat__title">Kalorie Dzisiaj</h5>
+                                <span class="stat__status neg">
+                                    87%
+                                </span>
+                            </div>
+                            <div class="stat__body">
+                                <span class="stat__number">1456 kcal</span>
+                                <a href="#stats" class="stat__more-info">Więcej</a>
+                            </div>
+                            <span class="stat__progress-bar"><span class="fluid neg kcal"></span></span>
                         </div>
-                        <div class="stat__body">
-                            <span class="stat__number">1456 kcal</span>
-                            <a href="#stats" class="stat__more-info">Więcej</a>
+                        <div class="stat">
+                            <div class="stat__header">
+                                <h5 class="stat__title">Cukier Dzisiaj</h5>
+                                <span class="stat__status pos">
+                                    47%
+                                </span>
+                            </div>
+                            <div class="stat__body">
+                                <span class="stat__number">18 g</span>
+                                <a href="#stats" class="stat__more-info">Więcej</a>
+                            </div>
+                            <span class="stat__progress-bar"><span class="fluid pos"></span></span>
                         </div>
-                        <span class="stat__progress-bar"><span class="fluid neg kcal"></span></span>
-                    </div>
-                    <div class="stat">
-                        <div class="stat__header">
-                            <h5 class="stat__title">Cukier Dzisiaj</h5>
-                            <span class="stat__status pos">
-                                47%
-                            </span>
-                        </div>
-                        <div class="stat__body">
-                            <span class="stat__number">18 g</span>
-                            <a href="#stats" class="stat__more-info">Więcej</a>
-                        </div>
-                        <span class="stat__progress-bar"><span class="fluid pos"></span></span>
-                    </div>
-                    <div class="stat">
-                        <div class="stat__header">
-                            <h5 class="stat__title">LogStreak</h5>
-                            <span class="stat__status">
-                                <img src="assets/icons/flame.svg" alt="">
-                            </span>
-                        </div>
-                        <div class="stat__body">
-                            <span class="stat__number">6</span>
-                            <a href="#rewards" class="stat__more-info">Odbierz bonus</a>
+                        <div class="stat">
+                            <div class="stat__header">
+                                <h5 class="stat__title">LogStreak</h5>
+                                <span class="stat__status">
+                                    <img src="assets/icons/flame.svg" alt="">
+                                </span>
+                            </div>
+                            <div class="stat__body">
+                                <span class="stat__number">6</span>
+                                <a href="#rewards" class="stat__more-info">Odbierz bonus</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -379,83 +389,84 @@
                             <a href="#rewards" class="stat__more-info">Odbierz bonus</a>
                         </div>
                     </div>
-                    <h3 class="section__sub-title">Trening</h3>
-                    <div class="stats__box">
-                        <div class="stat">
-                            <div class="stat__header">
-                                <h5 class="stat__title">Tydzień bieganie</h5>
-                                <span class="stat__status">
-                                    <img src="assets/icons/run.svg" alt="ikona biegania">
-                                </span>
-                            </div>
-                            <div class="stat__body">
-                                <span class="stat__number">25 km</span>
-                                <a href="#stats" class="stat__more-info">Więcej</a>
-                            </div>
+                </div>
+                <h3 class="section__sub-title">Trening</h3>
+                <div class="stats__box">
+                    <div class="stat">
+                        <div class="stat__header">
+                            <h5 class="stat__title">Tydzień bieganie</h5>
+                            <span class="stat__status">
+                                <img src="assets/icons/run.svg" alt="ikona biegania">
+                            </span>
                         </div>
-                        <div class="stat">
-                            <div class="stat__header">
-                                <h5 class="stat__title">Miesiąc bieganie</h5>
-                                <span class="stat__status">
-                                    <img src="assets/icons/run.svg" alt="ikona biegania">
-                                </span>
-                            </div>
-                            <div class="stat__body">
-                                <span class="stat__number">78 km</span>
-                                <a href="#stats" class="stat__more-info">Więcej</a>
-                            </div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat__header">
-                                <h5 class="stat__title">Ogół bieganie</h5>
-                                <span class="stat__status">
-                                    <img src="assets/icons/run.svg" alt="ikona biegania">
-                                </span>
-                            </div>
-                            <div class="stat__body">
-                                <span class="stat__number">561 km</span>
-                                <a href="#stats" class="stat__more-info">Więcej</a>
-                            </div>
+                        <div class="stat__body">
+                            <span class="stat__number">25 km</span>
+                            <a href="#stats" class="stat__more-info">Więcej</a>
                         </div>
                     </div>
-                    <div class="stats__box">
-                        <div class="stat">
-                            <div class="stat__header">
-                                <h5 class="stat__title">Dzisiaj chodzenie</h5>
-                                <span class="stat__status">
-                                    <img src="assets/icons/walk.svg" alt="ikona chodzenia">
-                                </span>
-                            </div>
-                            <div class="stat__body">
-                                <span class="stat__number">4345 kroków</span>
-                                <a href="#stats" class="stat__more-info">Więcej</a>
-                            </div>
+                    <div class="stat">
+                        <div class="stat__header">
+                            <h5 class="stat__title">Miesiąc bieganie</h5>
+                            <span class="stat__status">
+                                <img src="assets/icons/run.svg" alt="ikona biegania">
+                            </span>
                         </div>
-                        <div class="stat">
-                            <div class="stat__header">
-                                <h5 class="stat__title">Miesiąc chodzenie</h5>
-                                <span class="stat__status">
-                                    <img src="assets/icons/walk.svg" alt="ikona chodzenia">
-                                </span>
-                            </div>
-                            <div class="stat__body">
-                                <span class="stat__number">67 tys. kroków</span>
-                                <a href="#stats" class="stat__more-info">Więcej</a>
-                            </div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat__header">
-                                <h5 class="stat__title">Ogół chodzenie</h5>
-                                <span class="stat__status">
-                                    <img src="assets/icons/walk.svg" alt="ikona chodzenia">
-                                </span>
-                            </div>
-                            <div class="stat__body">
-                                <span class="stat__number">782 tys. kroków</span>
-                                <a href="#stats" class="stat__more-info">Więcej</a>
-                            </div>
+                        <div class="stat__body">
+                            <span class="stat__number">78 km</span>
+                            <a href="#stats" class="stat__more-info">Więcej</a>
                         </div>
                     </div>
+                    <div class="stat">
+                        <div class="stat__header">
+                            <h5 class="stat__title">Ogół bieganie</h5>
+                            <span class="stat__status">
+                                <img src="assets/icons/run.svg" alt="ikona biegania">
+                            </span>
+                        </div>
+                        <div class="stat__body">
+                            <span class="stat__number">561 km</span>
+                            <a href="#stats" class="stat__more-info">Więcej</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="stats__box">
+                    <div class="stat">
+                        <div class="stat__header">
+                            <h5 class="stat__title">Dzisiaj chodzenie</h5>
+                            <span class="stat__status">
+                                <img src="assets/icons/walk.svg" alt="ikona chodzenia">
+                            </span>
+                        </div>
+                        <div class="stat__body">
+                            <span class="stat__number">4345 kroków</span>
+                            <a href="#stats" class="stat__more-info">Więcej</a>
+                        </div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat__header">
+                            <h5 class="stat__title">Miesiąc chodzenie</h5>
+                            <span class="stat__status">
+                                <img src="assets/icons/walk.svg" alt="ikona chodzenia">
+                            </span>
+                        </div>
+                        <div class="stat__body">
+                            <span class="stat__number">67 tys. kroków</span>
+                            <a href="#stats" class="stat__more-info">Więcej</a>
+                        </div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat__header">
+                            <h5 class="stat__title">Ogół chodzenie</h5>
+                            <span class="stat__status">
+                                <img src="assets/icons/walk.svg" alt="ikona chodzenia">
+                            </span>
+                        </div>
+                        <div class="stat__body">
+                            <span class="stat__number">782 tys. kroków</span>
+                            <a href="#stats" class="stat__more-info">Więcej</a>
+                        </div>
+                    </div>
+                </div>
 
             </section>
             <section class="main__section friends" id="friends">
@@ -569,6 +580,55 @@
             </section>
             <section class="main__section rewards" id="rewards">
                 <h2 class="section__title">Nagrody</h2>
+                <h3 class="section__sub-title">Twoje nagrody</h3>
+
+                <div class="rewards-box">
+
+                    <div class="reward">
+                        <div class="reward__header">
+                            <h5 class="reward__title">Kupon Siłownia</h5>
+                            <img class="reward__icon" src="assets/icons/discount.svg" alt="ikona obniżki">
+                        </div>
+                        <div class="reward__body">
+                            <span class="reward__value">1 godzina</span>
+                            <p class="reward__description">Kupon uprawnia do wejścia na 1 godzinę na dowolną siłownię
+                                naszych partnerów</p>
+                        </div>
+                        <div class="reward__footer">
+                            <button class="btn reward-collect-btn">Odbierz</button>
+                        </div>
+                    </div>
+                    <div class="reward">
+                        <div class="reward__header">
+                            <h5 class="reward__title">Kupon Sałatka</h5>
+                            <img class="reward__icon" src="assets/icons/discount.svg" alt="ikona obniżki">
+                        </div>
+                        <div class="reward__body">
+                            <span class="reward__value">Gratis</span>
+                            <p class="reward__description">Kupon uprawnia do odbioru sałatki w dowolnym barze
+                                sałtkowym naszych partnerów</p>
+                        </div>
+                        <div class="reward__footer">
+                            <button class="btn reward-collect-btn">Odbierz</button>
+                        </div>
+                    </div>
+                    <div class="reward">
+                        <div class="reward__header">
+                            <h5 class="reward__title">Kupon Sprzęt</h5>
+                            <img class="reward__icon" src="assets/icons/discount.svg" alt="ikona obniżki">
+                        </div>
+                        <div class="reward__body">
+                            <span class="reward__value">20%</span>
+                            <p class="reward__description">Kupon uprawnia do zniżki o wartości 20% na sprzęt treningowy
+                                w dowolnym sklepie
+                                naszych partnerów</p>
+                        </div>
+                        <div class="reward__footer">
+                            <button class="btn reward-collect-btn">Odbierz</button>
+                        </div>
+                    </div>
+
+                </div>
             </section>
         </main>
     </div>

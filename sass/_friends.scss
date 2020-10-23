@@ -135,6 +135,8 @@
 .friend {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
     padding: 1rem;
     box-shadow: 0 7px 30px -10px rgb(150, 170, 180);
 

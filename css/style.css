@@ -72,6 +72,7 @@ body {
 }
 
 .login {
+  position: relative;
   min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -85,6 +86,16 @@ body {
           align-items: center;
   padding: 1rem;
   background-color: #fff;
+}
+
+.login__information {
+  position: absolute;
+  bottom: 0;
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.2rem;
+  opacity: .6;
+  line-height: 1.2rem;
 }
 
 .login__container {
@@ -628,15 +639,70 @@ body {
   display: block;
 }
 
-.dashboard__stats {
+.dashboard {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.dashboard__chall-btn-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.dashboard-new-chall-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  border-radius: 10rem;
+  margin: 2rem auto;
+  font-size: 1.9rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  background-color: #12CBC4;
+  -webkit-transition: -webkit-filter .3s;
+  transition: -webkit-filter .3s;
+  transition: filter .3s;
+  transition: filter .3s, -webkit-filter .3s;
+  outline: transparent;
+  cursor: pointer;
+  -webkit-box-shadow: 0 7px 30px -10px #96aab4;
+          box-shadow: 0 7px 30px -10px #96aab4;
+}
+
+.dashboard-new-chall-btn img {
+  margin-left: .5rem;
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+}
+
+.dashboard-new-chall-btn:hover {
+  -webkit-filter: brightness(120%);
+          filter: brightness(120%);
+}
+
+.dashboard-new-chall-btn:hover img {
+  -webkit-transform: translateX(0.5rem);
+          transform: translateX(0.5rem);
 }
 
 .challenges__in-progress {
@@ -656,6 +722,9 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding-left: 3rem;
   padding-right: 3rem;
   border-radius: 10rem;
@@ -1080,11 +1149,20 @@ body {
           transform: translateX(0.5rem);
 }
 
+.stat__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .stat {
-  min-width: 28rem;
   padding: 2rem;
   border-radius: 1rem;
-  margin: 1rem;
+  margin: 2rem 1rem;
   background: #FFFFFF;
   -webkit-box-shadow: 0 7px 30px -15px #96aab4;
           box-shadow: 0 7px 30px -15px #96aab4;
@@ -1411,6 +1489,11 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   padding: 1rem;
   -webkit-box-shadow: 0 7px 30px -10px #96aab4;
           box-shadow: 0 7px 30px -10px #96aab4;
@@ -1458,5 +1541,86 @@ body {
   text-align: center;
   font-size: 2rem;
   opacity: .2;
+}
+
+.rewards-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 3rem;
+}
+
+.reward {
+  padding: 1rem;
+  margin: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 3px solid #FFC312;
+}
+
+.reward__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.reward__title {
+  font-size: 2rem;
+}
+
+.reward__icon {
+  height: 4rem;
+}
+
+.reward__body {
+  margin-bottom: 2rem;
+}
+
+.reward__value {
+  display: block;
+  font-weight: 900;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+}
+
+.reward__description {
+  font-size: 1.2rem;
+  opacity: .7;
+  text-align: center;
+}
+
+.reward-collect-btn {
+  background-color: #FFC312;
+  font-weight: 800;
+  font-size: 1.6rem;
+  padding: 0.8rem 3.2rem;
+  border: 2px solid black;
+  outline: transparent;
+  -webkit-transition: -webkit-transform .2s ease-out;
+  transition: -webkit-transform .2s ease-out;
+  transition: transform .2s ease-out;
+  transition: transform .2s ease-out, -webkit-transform .2s ease-out;
+}
+
+.reward-collect-btn:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 /*# sourceMappingURL=style.css.map */

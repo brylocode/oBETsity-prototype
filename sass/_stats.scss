@@ -1,11 +1,14 @@
-.stat__box {}
+.stat__box {
+    display: flex;
+    flex-direction: column;
+}
 
 .stat {
-    min-width: 28rem;
+    // min-width: 28rem;
     padding: 2rem;
     // border: 1px solid $bg-yellow;
     border-radius: 1rem;
-    margin: 1rem;
+    margin: 2rem 1rem;
     background: #FFFFFF;
     box-shadow: 0 7px 30px -15px rgb(150, 170, 180);
 }

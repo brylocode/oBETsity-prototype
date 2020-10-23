@@ -6,12 +6,24 @@
     // bottom: 0;
     // left: 0;
     // right: 0;
+    position: relative;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 1rem;
     background-color: #fff;
+
+}
+
+.login__information {
+    position: absolute;
+    bottom: 0;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.2rem;
+    opacity: .6;
+    line-height: 1.2rem;
 }
 
 .login__container {

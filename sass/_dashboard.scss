@@ -1,5 +1,42 @@
-.dashboard__stats {
+.dashboard {
     display: flex;
+    flex-direction: column;
+}
+
+.dashboard__chall-btn-box {
+    display: flex;
+    align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.dashboard-new-chall-btn {
+    display: flex;
+    align-items: center;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    border-radius: 10rem;
+    margin: 2rem auto;
+    font-size: 1.9rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    background-color: #12CBC4;
+    transition: filter .3s;
+    outline: transparent;
+    cursor: pointer;
+    box-shadow: 0 7px 30px -10px #96aab4;
+
+    img {
+        margin-left: .5rem;
+        transition: transform .3s;
+    }
+
+    &:hover {
+        filter: brightness(120%);
+    }
+
+    &:hover img {
+        transform: translateX(.5rem);
+    }
+
 }

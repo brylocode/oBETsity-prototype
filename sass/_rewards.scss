@@ -1,0 +1,65 @@
+.rewards-box {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+}
+
+.reward {
+    padding: 1rem;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    border: 3px solid $bg-yellow;
+    // border-radius: 1rem;
+    // box-shadow: inset 0 0 10px rgba($color: #000000, $alpha: 0.3);
+
+}
+
+.reward__header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.reward__title {
+    font-size: 2rem;
+}
+
+.reward__icon {
+    height: 4rem;
+}
+
+.reward__body {
+    margin-bottom: 2rem;
+}
+
+.reward__value {
+    display: block;
+    font-weight: 900;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+}
+
+.reward__description {
+    font-size: 1.2rem;
+    opacity: .7;
+    text-align: center;
+}
+
+
+.reward-collect-btn {
+    background-color: $bg-yellow;
+    font-weight: 800;
+    font-size: 1.6rem;
+    // border-radius: 10rem;
+    padding: 0.8rem 3.2rem;
+    border: 2px solid rgb(0, 0, 0);
+    outline: transparent;
+    transition: transform .2s ease-out;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}
