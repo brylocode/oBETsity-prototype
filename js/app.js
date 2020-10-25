@@ -1,7 +1,6 @@
-const app = () => {
+const appPrototype = () => {
 
-    //login
-
+    //prototypical user login and logout
 
     const usernameInput = document.querySelector('#username');
     const passwordInput = document.querySelector('#password');
@@ -15,7 +14,6 @@ const app = () => {
     const userNameTopMenuBox = document.querySelector('.user__name-js');
     const userCurrencyBox = document.querySelector('.currency__value-js');
     const userNameDashboardBox = document.querySelector('.dashboard__username-js')
-
 
 
     let loggedUser = {
@@ -37,16 +35,11 @@ const app = () => {
         signInContent.style.display = `none`;
     }
 
-    const showError = (error) => {
-        alert(error);
-    }
-
     const handleFetchUserData = loggedUser => {
         userNameTopMenuBox.textContent = `${loggedUser.username}`;
         userCurrencyBox.textContent = `${loggedUser.currency}`;
         userNameDashboardBox.textContent = `${loggedUser.username}`;
     }
-
 
     const handleSignIn = loggedUser => {
         handleFetchUserData(loggedUser);
@@ -64,12 +57,12 @@ const app = () => {
             friends: [],
             achievements: [],
         }
-        if (username === '') {
-            showError('wpisz nazwę użytkownika...');
-        } else if (username.length >= 10) {
-            showError('nazwa użytkownika nie może być dłuższa niż 10');
-        } else {
 
+        if (username === '') {
+            alert('wpisz nazwę użytkownika...');
+        } else if (username.length >= 10) {
+            alert('nazwa użytkownika nie może być dłuższa niż 10');
+        } else {
             handleSignIn(loggedUser);
         }
     }
@@ -92,20 +85,18 @@ const app = () => {
         closeSideMenu();
     }
 
-
-
-
     signInBtn.addEventListener('click', getUsernameAndPassword);
     signOutBtn.addEventListener('click', logOut);
 
 
-    //menu
+    //handling menu
 
-    const menuOpenCloseBtn = document.querySelector('.side-menu__toggle-open-icon-js');
     const sideMenu = document.querySelector('.side-menu-js');
-    let menuLinks = document.querySelectorAll(".side-menu-js a.side-menu__link");
-    let links = document.querySelectorAll("a");
     const topMenu = document.querySelector('.top-menu-js');
+    let menuLinks = document.querySelectorAll(".side-menu-js a.side-menu__link");
+    const menuOpenCloseBtn = document.querySelector('.side-menu__toggle-open-icon-js');
+    let links = document.querySelectorAll("a");
+
     const main = document.querySelector('.main-js');
 
 
@@ -114,7 +105,6 @@ const app = () => {
         menuOpenCloseBtn.classList.add('side-menu__toggle-open-icon--close');
         main.classList.add('main--sidemenuopened')
         topMenu.classList.add('top-menu--sidemenuopened')
-        // document.body.style.marginLeft = '180px';
     }
 
     const closeSideMenu = () => {
@@ -122,7 +112,6 @@ const app = () => {
         menuOpenCloseBtn.classList.remove('side-menu__toggle-open-icon--close');
         main.classList.remove('main--sidemenuopened')
         topMenu.classList.remove('top-menu--sidemenuopened')
-        // document.body.style.marginLeft = '0';
     }
 
     const handleOpenCloseSideMenu = () => {
@@ -135,10 +124,9 @@ const app = () => {
 
     menuOpenCloseBtn.addEventListener('click', handleOpenCloseSideMenu);
     menuLinks.forEach(link => link.addEventListener('click', closeSideMenu))
-    // sideMenu.addEventListener('click', handleOpenCloseSideMenu)
 
 
-
+    // handling  application view
 
     for (let link of links) {
         link.addEventListener('click', function (e) {
@@ -153,7 +141,7 @@ const app = () => {
         });
     }
 
-    //challenges
+    //prototypical trrowing challenges
 
     const newChallBtn = document.querySelector('.new-chall-btn-js');
     const throwChallBtn = document.querySelector('.throw-chall-btn-js');
@@ -169,8 +157,6 @@ const app = () => {
     const timeLeftNewChallInput = document.querySelector('input#time-left');
 
     const challengesInProgressSection = document.querySelector('.challenges__in-progress-js');
-    const challengesWinSection = document.querySelector('.challenges__won-js');
-    const challengesLoseSection = document.querySelector('.challenges__lose-js');
     let challengesInProgressStartBtnsArr = document.querySelectorAll('.challenges__in-progress-js .chall button');;
 
     const handleOpenNewChallModal = () => {
@@ -181,6 +167,8 @@ const app = () => {
         newChallModal.style.display = 'none';
         clearNewChallModalInputs();
     }
+
+    //base base challenge validation
 
     const checkNewChallForm = () => {
         if (whoNewChallInput.value === '') {
@@ -204,6 +192,7 @@ const app = () => {
         newChallFormInputs.forEach(input => input.value = '');
     }
 
+    //challenge logic and structure
 
     const createNewChall = () => {
         const newChall = document.createElement('div');
@@ -284,13 +273,12 @@ const app = () => {
     throwChallBtn.addEventListener('click', checkNewChallForm);
 
     const startChall = (event) => {
-        // console.log(event.target.parentNode.parentNode.innerHTML)
         alert('ROZPOCZĄŁEŚ WYZWANIE');
         alert('*WYZWANIE W TRAKCIE*');
 
         const clickedChallBet = event.path[2];
 
-        // fake game
+        // simulation challenge course 
 
         const randomNumber = Math.floor(Math.random() * (1 - 0 + 1)) + 0;
 
@@ -310,22 +298,12 @@ const app = () => {
          `);
             clickedChallBet.style.display = 'none'
         }
-
-        console.log(randomNumber)
-
-
-        // clickedChallBet.classList.add('chall--win');
-        // challengesWinSection.appendChild(clickedChallBet)
-
-        // console.log(event.path[2].childNodes[3].childNodes[3])
-
-        // event.target.textContent();
     }
 
     challengesInProgressStartBtnsArr.forEach(btn => btn.addEventListener('click', startChall))
 
 
-    //dodawanie znajomych
+    //protootopica friends adding
 
 
     const newFriendBtn = document.querySelector('.add-new-friend-btn-js');
@@ -333,7 +311,6 @@ const app = () => {
     const closeNewFriendBtn = document.querySelector('.close-new-friend-btn-js');
     const newFriendModal = document.querySelector('.new-friend-modal-js');
     const friendContainer = document.querySelector('.friends__container-js');
-
     const newFriendUserNameInput = document.querySelector('input#friend__username');
 
 
@@ -361,6 +338,7 @@ const app = () => {
 
     const addNewFreind = () => {
         const newFriend = document.createElement('div');
+
         newFriend.classList.add('friend');
 
         newFriend.innerHTML = `
@@ -382,7 +360,6 @@ const app = () => {
     `)
         friendContainer.appendChild(newFriend);
         handleCloseNewFriendModal();
-
     }
 
 
@@ -391,9 +368,11 @@ const app = () => {
     newFriendConfirmBtn.addEventListener('click', checkNewFriendForm);
 
 
-    // reward collect
+    //prototopical reward collecting
 
     const rewardCollectBtns = document.querySelectorAll('.reward-collect-btn');
+
+    //uniqe code generator
 
     const handleGenerateCode = () => {
         const chars = '0123456789abcdefgh';
@@ -411,21 +390,15 @@ const app = () => {
                 return code;
             }
         }
-
-
         return codesGenerator();
     }
 
 
     const handleCollectReward = clickedCollectBtn => {
-
         const collectedReward = clickedCollectBtn.parentElement.parentElement;
         collectedReward.style.display = 'none';
 
         const transactionCode = handleGenerateCode();
-
-
-
 
         let res = confirm(`
         Czy napewno chcesz odebrać kupon?
@@ -433,11 +406,11 @@ const app = () => {
 
         if (res == true) {
             alert(`
-Odebrałeś swoją nagrodę.
+        Odebrałeś swoją nagrodę.
 
-Unikalny kod twojego kuponu to: ${transactionCode}.
+        Unikalny kod twojego kuponu to: ${transactionCode}.
 
-Zgłoś się z nim do wybranego punktu i ciesz się mniejszą wagą!!!
+        Zgłoś się z nim do wybranego punktu i ciesz się mniejszą wagą!!!
             `)
 
             collectedReward.style.display = 'none';
@@ -451,14 +424,10 @@ Zgłoś się z nim do wybranego punktu i ciesz się mniejszą wagą!!!
               Odbieranie kuponu zostało anulowane...
             `)
         }
-
-
     }
 
-
     rewardCollectBtns.forEach(btn => btn.addEventListener('click', () => handleCollectReward(btn)))
-
 }
 
 
-document.addEventListener('DOMContentLoaded', app)
+document.addEventListener('DOMContentLoaded', appPrototype);

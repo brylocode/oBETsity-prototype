@@ -5,6 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>oBETsity</title>
+    <meta name="description" content="Chudnij razem ze znajomymi">
+    <meta name="og:title" property="og:title" content="Chudnij ze znajomymi">
+    <meta name="twitter:card" content="summary">
+    <meta name="robots" content="noindex, nofollow">
+    <link href="URL" rel=canonical">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
@@ -81,12 +86,6 @@
                     </a>
                 </li>
                 <li class="side-menu__item">
-                    <a href="#calculator" class="side-menu__link">
-                        Kalkulator
-                        <img src="assets/icons/calculator.svg" alt="ikona kalkulatora">
-                    </a>
-                </li>
-                <li class="side-menu__item">
                     <a href="#stats" class="side-menu__link">
                         Statystyki
                         <img src="assets/icons/stats.svg" alt="ikona statystyk">
@@ -127,20 +126,12 @@
                     <a href="#challenges" class="btn dashboard-new-chall-btn">Rzuć wyzwanie <img
                             src="assets/icons/dice.svg" alt="kostka do gry"></a>
                 </div>
-                <!-- <h3 class="dashboard__section-title">Wyzwania</h3>
-                <div class="dashboard__challenges">
-                    <div class="active-challenges">
-                        <button class="btn new-challenge-btn">Nowe wyzwanie</button>
-                        <div class="acitve-challenges">Aktywne</div>
-                        <div class="invited-challenges">Zaproszenia do wyzwań</div>
-                    </div>
-                </div> -->
                 <h3 class="section__sub-title">Statystyki</h3>
                 <div class="dashboard__stats">
                     <div class="stat-box">
                         <div class="stat">
                             <div class="stat__header">
-                                <h5 class="stat__title">Kalorie Dzisiaj</h5>
+                                <h4 class="stat__title">Kalorie Dzisiaj</h4>
                                 <span class="stat__status neg">
                                     87%
                                 </span>
@@ -153,7 +144,7 @@
                         </div>
                         <div class="stat">
                             <div class="stat__header">
-                                <h5 class="stat__title">Cukier Dzisiaj</h5>
+                                <h4 class="stat__title">Cukier Dzisiaj</h4>
                                 <span class="stat__status pos">
                                     47%
                                 </span>
@@ -166,23 +157,19 @@
                         </div>
                         <div class="stat">
                             <div class="stat__header">
-                                <h5 class="stat__title">LogStreak</h5>
+                                <h4 class="stat__title">LogStreak</h4>
                                 <span class="stat__status">
                                     <img src="assets/icons/flame.svg" alt="">
                                 </span>
                             </div>
                             <div class="stat__body">
-                                <span class="stat__number">6</span>
+                                <span class="stat__number">8</span>
                                 <a href="#rewards" class="stat__more-info">Odbierz bonus</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-
-
-
-
             <section class="main__section challenges" id="challenges">
                 <div class="new-chall-modal new-chall-modal-js">
                     <button class="btn close-new-chall-btn close-new-chall-btn-js"><img src="assets/icons/x.svg"
@@ -213,7 +200,7 @@
                         </div>
 
                         <button class=" btn throw-chall-btn throw-chall-btn-js">Rzuć wyzwanie <img
-                                src="assets/icons/dice.svg" alt="kostka do gry"></button> </button>
+                                src="assets/icons/dice.svg" alt="kostka do gry"></button>
                         </form>
                 </div>
 
@@ -226,7 +213,7 @@
                     <div class="chall">
                         <div class="chall__header">
                             <div class="chall__what">
-                                <h5 class="chall__title">Zdrowe jedzenie</h5>
+                                <h4 class="chall__title">Zdrowe jedzenie</h4>
                                 <img src="assets/icons/target.svg" alt="ikona wyzwania" class="chall__icon">
                             </div>
                             <span class="chall__value">0/3 posiłki</span>
@@ -252,7 +239,7 @@
                     <div class="chall">
                         <div class="chall__header">
                             <div class="chall__what">
-                                <h5 class="chall__title">Kalorie Dzień</h5>
+                                <h4 class="chall__title">Kalorie Dzień</h4>
                                 <img src="assets/icons/target.svg" alt="ikona wyzwania" class="chall__icon">
                             </div>
                             <span class="chall__value">0/1500 kcal</span>
@@ -277,7 +264,7 @@
                     <div class="chall">
                         <div class="chall__header">
                             <div class="chall__what">
-                                <h5 class="chall__title">Bieganie</h5>
+                                <h4 class="chall__title">Bieganie</h4>
                                 <img src="assets/icons/target.svg" alt="ikona wyzwania" class="chall__icon">
                             </div>
                             <span class="chall__value">0/5 km</span>
@@ -304,7 +291,7 @@
                 <div class="chall chall--win">
                     <div class="chall__header">
                         <div class="chall__what">
-                            <h5 class="chall__title">Siłownia</h5>
+                            <h4 class="chall__title">Siłownia</h4>
                             <img src="assets/icons/target.svg" alt="ikona wyzwania" class="chall__icon">
                         </div>
                         <span class="chall__value">1 godzina</span>
@@ -326,7 +313,7 @@
                 <div class="chall chall--win">
                     <div class="chall__header">
                         <div class="chall__what">
-                            <h5 class="chall__title">Dzień Chodzenie</h5>
+                            <h4 class="chall__title">Dzień Chodzenie</h4>
                             <img src="assets/icons/target.svg" alt="ikona wyzwania" class="chall__icon">
                         </div>
                         <span class="chall__value">7k kroków</span>
@@ -349,7 +336,7 @@
                 <div class="chall chall--lose">
                     <div class="chall__header">
                         <div class="chall__what">
-                            <h5 class="chall__title">Cukier Dzień</h5>
+                            <h4 class="chall__title">Cukier Dzień</h4>
                             <img src="assets/icons/target.svg" alt="ikona wyzwania" class="chall__icon">
                         </div>
                         <span class="chall__value">20/15 g</span>
@@ -368,7 +355,6 @@
                     <div class="chall__footer">
                     </div>
                 </div>
-
             </section>
             <section class="main__section calculator" id="calculator">
                 <h2 class="section__title">Kalkulator</h2>
@@ -379,7 +365,7 @@
                 <div class="stats__box">
                     <div class="stat">
                         <div class="stat__header">
-                            <h5 class="stat__title">LogStreak</h5>
+                            <h4 class="stat__title">LogStreak</h4>
                             <span class="stat__status">
                                 <img src="assets/icons/flame.svg" alt="ikona ognia">
                             </span>
@@ -394,7 +380,7 @@
                 <div class="stats__box">
                     <div class="stat">
                         <div class="stat__header">
-                            <h5 class="stat__title">Tydzień bieganie</h5>
+                            <h4 class="stat__title">Tydzień bieganie</h4>
                             <span class="stat__status">
                                 <img src="assets/icons/run.svg" alt="ikona biegania">
                             </span>
@@ -406,7 +392,7 @@
                     </div>
                     <div class="stat">
                         <div class="stat__header">
-                            <h5 class="stat__title">Miesiąc bieganie</h5>
+                            <h4 class="stat__title">Miesiąc bieganie</h4>
                             <span class="stat__status">
                                 <img src="assets/icons/run.svg" alt="ikona biegania">
                             </span>
@@ -418,7 +404,7 @@
                     </div>
                     <div class="stat">
                         <div class="stat__header">
-                            <h5 class="stat__title">Ogół bieganie</h5>
+                            <h4 class="stat__title">Ogół bieganie</h4>
                             <span class="stat__status">
                                 <img src="assets/icons/run.svg" alt="ikona biegania">
                             </span>
@@ -432,7 +418,7 @@
                 <div class="stats__box">
                     <div class="stat">
                         <div class="stat__header">
-                            <h5 class="stat__title">Dzisiaj chodzenie</h5>
+                            <h4 class="stat__title">Dzisiaj chodzenie</h4>
                             <span class="stat__status">
                                 <img src="assets/icons/walk.svg" alt="ikona chodzenia">
                             </span>
@@ -444,7 +430,7 @@
                     </div>
                     <div class="stat">
                         <div class="stat__header">
-                            <h5 class="stat__title">Miesiąc chodzenie</h5>
+                            <h4 class="stat__title">Miesiąc chodzenie</h4>
                             <span class="stat__status">
                                 <img src="assets/icons/walk.svg" alt="ikona chodzenia">
                             </span>
@@ -456,7 +442,7 @@
                     </div>
                     <div class="stat">
                         <div class="stat__header">
-                            <h5 class="stat__title">Ogół chodzenie</h5>
+                            <h4 class="stat__title">Ogół chodzenie</h4>
                             <span class="stat__status">
                                 <img src="assets/icons/walk.svg" alt="ikona chodzenia">
                             </span>
@@ -586,7 +572,7 @@
 
                     <div class="reward">
                         <div class="reward__header">
-                            <h5 class="reward__title">Kupon Siłownia</h5>
+                            <h4 class="reward__title">Kupon Siłownia</h4>
                             <img class="reward__icon" src="assets/icons/discount.svg" alt="ikona obniżki">
                         </div>
                         <div class="reward__body">
@@ -600,7 +586,7 @@
                     </div>
                     <div class="reward">
                         <div class="reward__header">
-                            <h5 class="reward__title">Kupon Sałatka</h5>
+                            <h4 class="reward__title">Kupon Sałatka</h4>
                             <img class="reward__icon" src="assets/icons/discount.svg" alt="ikona obniżki">
                         </div>
                         <div class="reward__body">
@@ -614,7 +600,7 @@
                     </div>
                     <div class="reward">
                         <div class="reward__header">
-                            <h5 class="reward__title">Kupon Sprzęt</h5>
+                            <h4 class="reward__title">Kupon Sprzęt</h4>
                             <img class="reward__icon" src="assets/icons/discount.svg" alt="ikona obniżki">
                         </div>
                         <div class="reward__body">
